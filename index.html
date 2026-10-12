@@ -3,40 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>WARHOLA Gin Experience · Edición Bloody</title>
-  <meta name="description" content="Sommelier Digital y Perfumista de Autor mobile-first para la Edición Bloody de Warhola Gin. Cata guiada en capas olfativas, umami y acordes con tónica.">
-  <meta property="og:title" content="WARHOLA Gin Experience · Edición Bloody">
-  <meta property="og:description" content="Sommelier Digital y Perfumista de Autor para la Edición Bloody de Warhola Gin.">
+  <title>WARHOLA Gin · Edición Bloody</title>
+  <meta name="description" content="Sommelier Digital y Guía de Cata Sensorial de Autor para la Edición Bloody de Warhola Gin. Experiencia interactiva en capas olfativas, umami y coctelería.">
+  <meta property="og:title" content="WARHOLA Gin · Edición Bloody">
+  <meta property="og:description" content="Guía interactiva de cata sommelier en capas para Warhola Gin Edición Bloody.">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#0d0b0a">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Warhola Gin">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <!-- Google Fonts: Cormorant Garamond & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* =========================================================================
-       VARIABLES & SISTEMA DE DISEÑO EDITORIAL WARHOLA BLOODY
+       VARIABLES & SISTEMA DE DISEÑO EDITORIAL (PURO CSS - CERO IMÁGENES)
        ========================================================================= */
     :root {
       --bg: #0d0b0a;
       --ink: #f5eedf;
       --mute: #998e82;
       --line: #2b231e;
+      --line-subtle: #1f1915;
       --card: #15110f;
       --card-subtle: #1c1512;
+      --card-elevated: #211915;
       --ac: #8f171d;
       --ac-soft: rgba(143, 23, 29, 0.18);
+      --ac-glow: rgba(143, 23, 29, 0.35);
       --gold: #caa055;
-      --gold-soft: rgba(202, 160, 85, 0.14);
+      --gold-soft: rgba(202, 160, 85, 0.12);
+      --gold-glow: rgba(202, 160, 85, 0.28);
       --green: #447450;
+      --green-soft: rgba(68, 116, 80, 0.15);
       --font-serif: 'Cormorant Garamond', Georgia, serif;
       --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     }
@@ -46,13 +49,18 @@
       --ink: #181412;
       --mute: #6c6358;
       --line: #dfd7c5;
+      --line-subtle: #ece5d6;
       --card: #ffffff;
-      --card-subtle: #f3ede2;
+      --card-subtle: #f5efe3;
+      --card-elevated: #f9f5ed;
       --ac: #88161b;
       --ac-soft: rgba(136, 22, 27, 0.08);
+      --ac-glow: rgba(136, 22, 27, 0.2);
       --gold: #b3883b;
       --gold-soft: rgba(179, 136, 59, 0.12);
+      --gold-glow: rgba(179, 136, 59, 0.2);
       --green: #2e5938;
+      --green-soft: rgba(46, 89, 56, 0.1);
     }
 
     * {
@@ -68,8 +76,6 @@
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       transition: background-color 0.3s ease, color 0.3s ease;
-      selection-background-color: var(--ac);
-      selection-color: #fff;
     }
 
     ::selection {
@@ -80,12 +86,13 @@
     h1, h2, h3, h4, .serif {
       font-family: var(--font-serif);
       font-weight: 400;
+      letter-spacing: -0.01em;
     }
 
     .app-container {
       max-width: 480px;
       margin: 0 auto;
-      padding: 16px 20px 48px;
+      padding: 18px 20px 48px;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -93,109 +100,7 @@
     }
 
     /* =========================================================================
-       CLASES DE IMAGEN ESTÁNDAR (WARHOLA GIN EDICIÓN BLOODY)
-       ========================================================================= */
-    .img-fluid {
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .hero-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      max-height: 480px;
-      object-fit: cover;
-      object-position: center;
-      border: 1px solid var(--line);
-      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.55);
-      background: var(--card);
-    }
-
-    .history-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      max-height: 480px;
-      object-fit: cover;
-      object-position: top center;
-      border: 1px solid var(--gold);
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
-      background: var(--card);
-    }
-
-    .label-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      max-height: 380px;
-      object-fit: contain;
-      object-position: center;
-      padding: 12px;
-      border: 1px solid var(--gold);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-      background: var(--card);
-    }
-
-    .bottle-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      max-height: 340px;
-      object-fit: cover;
-      object-position: center;
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
-      background: var(--card);
-    }
-
-    .ingredients-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      max-height: 440px;
-      object-fit: cover;
-      object-position: center;
-      border: 1px solid var(--ac);
-      box-shadow: 0 10px 32px rgba(179, 38, 30, 0.28);
-      background: var(--card);
-    }
-
-    .promo-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      max-height: 480px;
-      object-fit: cover;
-      object-position: center;
-      border: 1.5px solid var(--gold);
-      box-shadow: 0 14px 44px rgba(0, 0, 0, 0.65);
-      background: var(--card);
-    }
-
-    .ritual-scene-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      max-height: 480px;
-      object-fit: cover;
-      object-position: center;
-      border: 1px solid var(--line);
-      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.55);
-      background: var(--card);
-    }
-
-    .header-emblem-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* =========================================================================
-       COMPONENTES & NAVEGACIÓN
+       ELEMENTOS TIPOGRÁFICOS Y DE IDENTIDAD EDITORIAL
        ========================================================================= */
     .eyebrow {
       font-size: 10px;
@@ -210,9 +115,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-bottom: 12px;
+      padding-bottom: 14px;
       border-bottom: 1px solid var(--line);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .brand-group {
@@ -221,13 +126,22 @@
       gap: 12px;
     }
 
-    .avatar-emblem {
-      width: 36px;
-      height: 36px;
+    /* Sello Monograma Tipográfico Editorial */
+    .brand-seal {
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       border: 1px solid var(--gold);
-      overflow: hidden;
-      background: var(--card);
+      background: var(--card-subtle);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1;
+      box-shadow: 0 0 16px var(--gold-soft);
       flex-shrink: 0;
     }
 
@@ -248,7 +162,7 @@
       background: var(--card);
       border: 1px solid var(--line);
       color: var(--mute);
-      padding: 6px 10px;
+      padding: 7px 11px;
       cursor: pointer;
       font-size: 11px;
       letter-spacing: 0.1em;
@@ -256,8 +170,9 @@
       font-family: inherit;
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
       transition: all 0.2s ease;
+      touch-action: manipulation;
     }
 
     .btn-icon:hover {
@@ -292,7 +207,7 @@
       text-align: left;
       cursor: pointer;
       color: var(--mute);
-      font-size: 9.5px;
+      font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 0.14em;
       font-family: inherit;
@@ -342,12 +257,13 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Tarjetas y Contenedores */
+    /* Tarjetas Editoriales */
     .card {
       background: var(--card);
       border: 1px solid var(--line);
-      padding: 16px;
+      padding: 18px;
       margin-bottom: 16px;
+      position: relative;
     }
 
     .card-gold {
@@ -355,8 +271,13 @@
       background: var(--card-subtle);
     }
 
+    .card-ac {
+      border-color: var(--ac);
+      background: var(--card-subtle);
+    }
+
     .card-title {
-      font-size: 18px;
+      font-size: 19px;
       color: var(--ink);
       margin-bottom: 6px;
     }
@@ -374,18 +295,79 @@
       line-height: 1.5;
     }
 
+    /* Tarjeta Hero Tipográfica */
+    .hero-banner {
+      border: 1px solid var(--gold);
+      background: linear-gradient(180deg, var(--card-subtle) 0%, var(--card) 100%);
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-edition-badge {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(202, 160, 85, 0.4);
+      padding: 4px 12px;
+      margin-bottom: 14px;
+      background: var(--bg);
+    }
+
+    .hero-main-title {
+      font-size: 34px;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      text-align: left;
+    }
+
+    .spec-item {
+      font-size: 11px;
+      color: var(--mute);
+      line-height: 1.35;
+    }
+
+    .spec-item strong {
+      color: var(--ink);
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* Pasos del Ritual */
     .ritual-step {
       display: flex;
-      gap: 12px;
-      padding: 12px;
+      gap: 14px;
+      padding: 12px 14px;
       background: var(--card);
       border: 1px solid var(--line);
       margin-bottom: 10px;
+      align-items: flex-start;
     }
 
     .step-number {
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       border: 1px solid var(--gold);
       color: var(--gold);
@@ -395,6 +377,7 @@
       font-size: 12px;
       font-weight: 600;
       flex-shrink: 0;
+      margin-top: 2px;
     }
 
     /* Botones de Acción */
@@ -415,6 +398,7 @@
       font-family: inherit;
       transition: all 0.25s ease;
       margin-top: 16px;
+      touch-action: manipulation;
     }
 
     .btn-main:hover {
@@ -436,6 +420,7 @@
       margin-top: 10px;
       transition: all 0.2s ease;
       text-align: center;
+      touch-action: manipulation;
     }
 
     .btn-secondary:hover {
@@ -452,7 +437,7 @@
 
     .layer-pill {
       flex: 1;
-      padding: 8px 4px;
+      padding: 9px 4px;
       text-align: center;
       background: var(--card);
       border: 1px solid var(--line);
@@ -462,6 +447,7 @@
       letter-spacing: 0.12em;
       cursor: pointer;
       transition: all 0.2s ease;
+      font-family: inherit;
     }
 
     .layer-pill.active {
@@ -475,14 +461,19 @@
     .option-btn {
       width: 100%;
       text-align: left;
-      padding: 12px 14px;
+      padding: 13px 15px;
       background: var(--card);
       border: 1px solid var(--line);
       color: var(--ink);
       font-family: inherit;
       cursor: pointer;
-      margin-bottom: 8px;
+      margin-bottom: 9px;
       transition: all 0.2s ease;
+      font-size: 13.5px;
+      line-height: 1.4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .option-btn:hover {
@@ -493,21 +484,44 @@
     .option-btn.selected {
       border-color: var(--gold);
       background: var(--gold-soft);
+      color: var(--gold);
     }
 
     .feedback-box {
-      padding: 12px;
+      padding: 14px;
       margin-top: 10px;
       border: 1px solid var(--gold);
       background: var(--card-subtle);
       font-size: 13px;
-      line-height: 1.5;
+      line-height: 1.55;
       display: none;
     }
 
     .feedback-box.active {
       display: block;
       animation: fadeIn 0.3s ease;
+    }
+
+    /* Cuadrícula de Botánicos Descubiertos */
+    .botanicals-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin: 14px 0;
+    }
+
+    .botanical-chip {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      font-size: 12px;
+    }
+
+    .botanical-chip strong {
+      display: block;
+      color: var(--gold);
+      font-size: 12.5px;
+      margin-bottom: 2px;
     }
 
     /* Tabs de Coctelería */
@@ -524,10 +538,10 @@
       background: transparent;
       border: none;
       color: var(--mute);
-      font-size: 10.5px;
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      padding: 6px 4px;
+      padding: 7px 4px;
       cursor: pointer;
       font-family: inherit;
       transition: all 0.2s ease;
@@ -570,7 +584,7 @@
       border: 1px solid var(--gold);
       max-width: 440px;
       width: 100%;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
       max-height: 90vh;
       overflow-y: auto;
     }
@@ -588,7 +602,7 @@
       background: transparent;
       border: none;
       color: var(--mute);
-      font-size: 20px;
+      font-size: 22px;
       cursor: pointer;
       padding: 4px 8px;
     }
@@ -600,12 +614,12 @@
 
     .tab-pills {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 4px;
       background: var(--bg);
       padding: 4px;
       border: 1px solid var(--line);
-      margin: 12px 0;
+      margin: 14px 0 12px;
     }
 
     .tab-pill-btn {
@@ -613,9 +627,11 @@
       border: none;
       color: var(--mute);
       font-size: 11px;
-      padding: 6px;
+      padding: 7px;
       cursor: pointer;
       font-family: inherit;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
 
     .tab-pill-btn.active {
@@ -626,14 +642,14 @@
 
     .step-item {
       display: flex;
-      gap: 10px;
-      margin-bottom: 10px;
+      gap: 12px;
+      margin-bottom: 12px;
       line-height: 1.45;
     }
 
     .step-badge {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       background: var(--gold);
       color: #000;
       border-radius: 50%;
@@ -653,12 +669,12 @@
       transform: translateX(-50%);
       background: var(--ac);
       color: #fff;
-      padding: 8px 18px;
+      padding: 10px 20px;
       font-size: 12px;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       font-weight: 600;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
       display: none;
       z-index: 2000;
       border: 1px solid var(--gold);
@@ -688,13 +704,14 @@
   <div class="app-container">
 
     <!-- ===================================================================
-         CABECERA MINIMALISTA
+         CABECERA EDITORIAL
          =================================================================== -->
     <header>
       <div class="header-bar">
         <div class="brand-group">
-          <div class="avatar-emblem">
-            <img src="52868.jpg" alt="Warhola Bloody Emblem" class="header-emblem-img">
+          <!-- Monograma Sello Editorial de Autor -->
+          <div class="brand-seal" title="Warhola Gin">
+            W
           </div>
           <div>
             <span class="eyebrow">WARHOLA GIN</span>
@@ -713,7 +730,7 @@
         </div>
       </div>
 
-      <!-- NAVEGADOR DE FASES -->
+      <!-- NAVEGADOR DE FASES DE CATA -->
       <nav class="nav-phases">
         <button class="nav-phase-btn active" onclick="switchPhase(0)" id="nav-btn-0">
           <span class="dot-pulse" id="dot-0"></span>
@@ -735,60 +752,71 @@
     </header>
 
     <!-- ===================================================================
-         CONTENIDO PRINCIPAL: 4 FASES
+         CONTENIDO PRINCIPAL: 4 FASES DE CATA GUIADA
          =================================================================== -->
     <main>
 
       <!-- FASE 0: RITUAL & PORTADA -->
       <section class="phase-panel active" id="phase-0">
-        <span class="eyebrow" style="margin-bottom: 6px;">CATA DE AUTOR · SOMMELIER DIGITAL</span>
-        <h2 class="serif" style="font-size: 28px; line-height: 1.15; margin-bottom: 12px;">
-          A Bloody Mary, Distilled.
-        </h2>
+        <!-- BANNER HERO EDITORIAL TIPOGRÁFICO -->
+        <div class="hero-banner">
+          <span class="hero-edition-badge">Lote Limitado · Gin de Autor</span>
+          <h2 class="hero-main-title serif">A Bloody Mary, Distilled.</h2>
+          <p class="hero-subtitle serif">La alquimia entre perfumería botánica y alta cocina.</p>
+          <p class="text-mute" style="font-size: 13.5px; line-height: 1.6; max-width: 380px; margin: 0 auto;">
+            Un destilado que rompe convenciones: capas aromáticas de huerta, textura umami y una base de papa artesanal descubiertas paso a paso.
+          </p>
 
-        <!-- HERO PRINCIPAL (PORTADA) -->
-        <div style="margin-bottom: 20px;">
-          <img src="56444.jpg" alt="Warhola Gin Edición Bloody" class="hero-img">
+          <div class="specs-grid">
+            <div class="spec-item">
+              <strong>Base Propia</strong>
+              Vodka de Papa Artesanal
+            </div>
+            <div class="spec-item">
+              <strong>Graduación</strong>
+              43% Vol. Alc.
+            </div>
+            <div class="spec-item">
+              <strong>Destilación</strong>
+              Alambique de Cobre
+            </div>
+            <div class="spec-item">
+              <strong>Perfil</strong>
+              Salino, Umami & Botánico
+            </div>
+          </div>
         </div>
 
-        <p class="text-body">
-          Tenés en tus manos la <strong>Edición Bloody de Warhola Gin</strong>. Un destilado de autor que rompe convenciones: capas, matices y acordes que vas a descubrir paso a paso con tu nariz y tu paladar.
-        </p>
-
         <div class="card card-gold">
-          <h3 class="card-title">El Ritual de Servicio en Barra</h3>
-          <p class="text-mute" style="margin-bottom: 12px;">
-            Para apreciar la arquitectura botánica y la textura umami antes de la dilución:
+          <span class="eyebrow" style="margin-bottom: 4px;">PROTOCOLO DE SERVICIO EN BARRA</span>
+          <h3 class="card-title">El Ritual de Cata</h3>
+          <p class="text-mute" style="margin-bottom: 14px;">
+            Para apreciar la arquitectura botánica y la textura antes de la dilución:
           </p>
 
           <div class="ritual-step">
             <span class="step-number">1</span>
             <div>
-              <strong style="font-size: 13px; color: var(--gold);">La copa Sphere</strong>
-              <p class="text-mute">Servilo en copa Sphere: un globo amplio sin tallo para concentrar el mapa aromático.</p>
+              <strong style="font-size: 13.5px; color: var(--gold);">La copa Sphere</strong>
+              <p class="text-mute">Servilo en copa Sphere: un globo amplio sin tallo para concentrar y oxigenar el mapa aromático.</p>
             </div>
           </div>
 
           <div class="ritual-step">
             <span class="step-number">2</span>
             <div>
-              <strong style="font-size: 13px; color: var(--gold);">El hielo macizo</strong>
-              <p class="text-mute">Hielo abundante, cristalino y macizo para enfriar en segundos sin diluir el destilado.</p>
+              <strong style="font-size: 13.5px; color: var(--gold);">El hielo macizo</strong>
+              <p class="text-mute">Hielo abundante, cristalino y macizo para enfriar en segundos sin aguar el destilado.</p>
             </div>
           </div>
 
           <div class="ritual-step">
             <span class="step-number">3</span>
             <div>
-              <strong style="font-size: 13px; color: var(--gold);">El giro continuo</strong>
+              <strong style="font-size: 13.5px; color: var(--gold);">El giro continuo</strong>
               <p class="text-mute">Dos giros suaves para oxigenar el gin y activar los aceites botánicos en las paredes del cristal.</p>
             </div>
           </div>
-        </div>
-
-        <!-- ATMÓSFERA DEL RITUAL -->
-        <div style="margin: 20px 0;">
-          <img src="56441.jpg" alt="Atmósfera del Ritual" class="ritual-scene-img">
         </div>
 
         <button class="btn-main" onclick="switchPhase(1)">
@@ -799,7 +827,7 @@
 
       <!-- FASE 1: EN PURO (CAPAS OLFATIVAS Y PALADAR) -->
       <section class="phase-panel" id="phase-1">
-        <span class="eyebrow" style="margin-bottom: 6px;">FASE 2 · EN PURO</span>
+        <span class="eyebrow" style="margin-bottom: 4px;">FASE 2 · EN PURO</span>
         <h2 class="serif" style="font-size: 26px; line-height: 1.15; margin-bottom: 12px;">
           Capas Olfativas y Paladar
         </h2>
@@ -811,11 +839,6 @@
           <button class="layer-pill" onclick="switchLayer(2)" id="layer-btn-2">3. Umami</button>
         </div>
 
-        <!-- BOTELLA DE REFERENCIA -->
-        <div style="margin-bottom: 18px;">
-          <img src="52714.jpg" alt="Botella Warhola Bloody" class="bottle-img">
-        </div>
-
         <!-- CAPA 0: BASE OLFATIVA -->
         <div id="layer-content-0" class="layer-content">
           <div class="card">
@@ -824,20 +847,22 @@
             <p class="text-mute" style="margin-bottom: 12px;">
               Acercá la nariz al borde de la copa, labios apenas abiertos, y respirá corto tres veces.
             </p>
-            <p style="font-size: 14px; font-weight: 500; margin-bottom: 10px;">¿Qué aroma aparece primero?</p>
+            <p style="font-size: 14px; font-weight: 500; margin-bottom: 12px;">¿Qué aroma percibes primero?</p>
 
             <button class="option-btn" onclick="showFeedback('f-0-1', this)">
-              🌲 Bosque vivo y resina fresca de enebro
+              <span>🌲 Bosque vivo y resina fresca de pino</span>
+              <span>›</span>
             </button>
             <div id="f-0-1" class="feedback-box">
-              <strong style="color: var(--gold);">✓ Enebro alpino:</strong> Nota resinosa de bosque vivo, la baya noble que define la columna vertebral del gin.
+              <strong style="color: var(--gold);">✓ Enebro alpino:</strong> La baya sagrada que define la columna vertebral de todo gin auténtico. Resina limpia y fresca.
             </div>
 
             <button class="option-btn" onclick="showFeedback('f-0-2', this)">
-              🍋 Cítrico seco y semilla tostada
+              <span>🍋 Cítrico seco y semilla tostada</span>
+              <span>›</span>
             </button>
             <div id="f-0-2" class="feedback-box">
-              <strong style="color: var(--gold);">✓ Coriandro tostado:</strong> La semilla aporta un perfil cítrico y seco elegante que no proviene del zumo de fruta.
+              <strong style="color: var(--gold);">✓ Coriandro tostado:</strong> La semilla aporta un perfil cítrico y seco elegante que proviene del tostado noble, no del zumo.
             </div>
           </div>
         </div>
@@ -848,62 +873,62 @@
             <span class="eyebrow" style="color: var(--green);">Sentido: Olfato</span>
             <h3 class="card-title" style="margin-top: 4px;">La Capa Vegetal de Huerta</h3>
             <p class="text-mute" style="margin-bottom: 12px;">
-              Imaginá el aroma que te queda en las manos al rozar hojas de huerto bajo el sol.
+              Imaginá el aroma que te queda en las manos al rozar hojas de huerto bajo el sol estival.
             </p>
-            <p style="font-size: 14px; font-weight: 500; margin-bottom: 10px;">¿Qué nota verde sentís?</p>
+            <p style="font-size: 14px; font-weight: 500; margin-bottom: 12px;">¿Qué nota verde sentís?</p>
 
             <button class="option-btn" onclick="showFeedback('f-1-1', this)">
-              🌿 Tallo y hoja de planta frotada
+              <span>🌿 Tallo y hoja de planta frotada</span>
+              <span>›</span>
             </button>
             <div id="f-1-1" class="feedback-box">
-              <strong style="color: var(--gold);">✓ Planta de tomate destilada:</strong> Destilada en alambique de cobre tradicional; aporta un perfume verde balsámico insustituible.
+              <strong style="color: var(--gold);">✓ Planta de tomate destilada:</strong> Destilada en alambique de cobre tradicional; aporta un perfume verde balsámico y vegetal insustituible.
             </div>
 
             <button class="option-btn" onclick="showFeedback('f-1-2', this)">
-              🌱 Tallo crujiente de apio con fondo salino
+              <span>🌱 Tallo crujiente de apio con fondo salino</span>
+              <span>›</span>
             </button>
             <div id="f-1-2" class="feedback-box">
-              <strong style="color: var(--gold);">✓ Apio de huerta fresca:</strong> Aporta arquitectura vegetal crujiente y una salinidad fresca natural.
+              <strong style="color: var(--gold);">✓ Apio de huerta fresca:</strong> Aporta arquitectura vegetal crujiente y una sutil salinidad natural.
             </div>
           </div>
         </div>
 
-        <!-- CAPA 2: UMAMI Y TEXTURA -->
+        <!-- CAPA 2: PALADAR, TEXTURA Y UMAMI -->
         <div id="layer-content-2" class="layer-content" style="display:none;">
-          <div class="card">
+          <div class="card card-ac">
             <span class="eyebrow" style="color: var(--ac);">Sentido: Paladar y Lengua</span>
             <h3 class="card-title" style="margin-top: 4px;">Paladar, Textura y Umami</h3>
             <p class="text-mute" style="margin-bottom: 12px;">
               Un sorbo pequeño, recorré toda la boca y tragá despacio. Quedate unos segundos en silencio: ¿qué le pasa a tu saliva?
             </p>
-            <p style="font-size: 14px; font-weight: 500; margin-bottom: 10px;">¿Qué sentís físicamente en boca?</p>
+            <p style="font-size: 14px; font-weight: 500; margin-bottom: 12px;">¿Qué sentís físicamente en boca?</p>
 
             <button class="option-btn" onclick="showFeedback('f-2-1', this)">
-              🍅 Salivación continua y salmuera botánica
+              <span>🍅 Salivación continua y salmuera botánica</span>
+              <span>›</span>
             </button>
             <div id="f-2-1" class="feedback-box">
               <strong style="color: var(--gold);">✓ Tomate seco y alcaparra curada:</strong> Estimulan los laterales de la lengua con una salinidad gastronómica persistente.
             </div>
 
             <button class="option-btn" onclick="showFeedback('f-2-2', this)">
-              🔥 Cosquilleo templado y humo noble
+              <span>🔥 Cosquilleo templado y humo noble</span>
+              <span>›</span>
             </button>
             <div id="f-2-2" class="feedback-box">
-              <strong style="color: var(--gold);">✓ Jalapeño ahumado a la brasa:</strong> Calor amable sin picor agresivo, dejando longitud en el retrogusto.
+              <strong style="color: var(--gold);">✓ Jalapeño ahumado a la brasa:</strong> Calor amable en retrogusto sin ardor agresivo, prolongando el final.
             </div>
 
             <button class="option-btn" onclick="showFeedback('f-2-3', this)">
-              ✨ Textura sedosa y cuerpo aterciopelado
+              <span>✨ Textura sedosa y cuerpo aterciopelado</span>
+              <span>›</span>
             </button>
             <div id="f-2-3" class="feedback-box">
-              <strong style="color: var(--gold);">✓ Base artesanal de papa:</strong> Fermentada y destilada en casa, brinda una untuosidad táctil que abriga el paladar.
+              <strong style="color: var(--gold);">✓ Base artesanal de papa:</strong> Fermentada y destilada en casa, otorga untuosidad táctil que abriga el paladar sin asperezas alcohólicas.
             </div>
           </div>
-        </div>
-
-        <!-- CÁLIZ E INGREDIENTES DESTILADOS -->
-        <div style="margin: 18px 0;">
-          <img src="56440.jpg" alt="Cáliz e Ingredientes Destilados" class="ingredients-img">
         </div>
 
         <button class="btn-main" onclick="switchPhase(2)">
@@ -914,18 +939,13 @@
 
       <!-- FASE 2: CON TÓNICA (CÍRCULO DE ACORDES) -->
       <section class="phase-panel" id="phase-2">
-        <span class="eyebrow" style="margin-bottom: 6px;">FASE 3 · CON TÓNICA</span>
+        <span class="eyebrow" style="margin-bottom: 4px;">FASE 3 · CON TÓNICA</span>
         <h2 class="serif" style="font-size: 26px; line-height: 1.15; margin-bottom: 12px;">
           Alquimia de Dilución
         </h2>
 
-        <!-- ESCENA CON TÓNICA -->
-        <div style="margin-bottom: 18px;">
-          <img src="56441.jpg" alt="Ritual con Tónica" class="ritual-scene-img">
-        </div>
-
         <p class="text-body">
-          La efervescencia de la tónica actúa como un transportador molecular: el gas carbónico arrastra los aceites esenciales hacia la superficie y despierta nuevos acordes de autor.
+          La efervescencia de la tónica actúa como un transportador molecular: el gas carbónico arrastra los aceites esenciales hacia la superficie y despierta acordes que no existían por separado.
         </p>
 
         <!-- ACORDES SENSORIALES INTERACTIVOS -->
@@ -936,7 +956,7 @@
             La efervescencia inicial desprende las moléculas más livianas:
           </p>
           <div class="card card-gold" style="margin: 0; padding: 12px;">
-            <strong style="color: var(--gold); font-size: 13px;">🌿 Verde Luminoso (Hoja de Tomate + Apio)</strong>
+            <strong style="color: var(--gold); font-size: 13.5px;">🌿 Verde Luminoso (Hoja de Tomate + Apio)</strong>
             <p class="text-mute" style="font-size: 12.5px; margin-top: 4px;">
               Un destello verde brillante e hiperfresco que salta de la copa al contacto con la burbuja.
             </p>
@@ -947,12 +967,12 @@
           <span class="eyebrow" style="color: var(--gold);">Momento 2 · Después de 30 segundos</span>
           <h3 class="card-title">Acorde de Corazón</h3>
           <p class="text-mute" style="margin-bottom: 10px;">
-            La burbuja se asienta y emerge el núcleo aromático estructurado:
+            La burbuja se estabiliza y emerge el núcleo aromático estructurado:
           </p>
           <div class="card card-gold" style="margin: 0; padding: 12px;">
-            <strong style="color: var(--gold); font-size: 13px;">🌲 Bosque Especiado (Enebro + Especias)</strong>
+            <strong style="color: var(--gold); font-size: 13.5px;">🌲 Bosque Especiado (Enebro + Coriandro)</strong>
             <p class="text-mute" style="font-size: 12.5px; margin-top: 4px;">
-              Madera noble con pimienta tibia: la columna que sostiene la copa en todo su recorrido.
+              Madera noble con semilla cítrica seca: la columna vertebral que sostiene la copa en todo su recorrido.
             </p>
           </div>
         </div>
@@ -964,7 +984,7 @@
             Tras tragar el sorbo, registrá la persistencia que queda en boca:
           </p>
           <div class="card card-gold" style="margin: 0; padding: 12px;">
-            <strong style="color: var(--ac); font-size: 13px;">🔥 Calor Umami (Jalapeño Ahumado + Salsa Inglesa)</strong>
+            <strong style="color: var(--ac); font-size: 13.5px;">🔥 Calor Umami (Jalapeño Ahumado + Salsa Inglesa)</strong>
             <p class="text-mute" style="font-size: 12.5px; margin-top: 4px;">
               El umami fermentado y el calor de brasa prolongan la memoria en boca más allá de un minuto.
             </p>
@@ -979,57 +999,77 @@
 
       <!-- FASE 3: REVELACIÓN (HISTORIA, ETIQUETA Y COCTELERÍA) -->
       <section class="phase-panel" id="phase-3">
-        <span class="eyebrow" style="margin-bottom: 6px;">FASE 4 · REVELACIÓN</span>
-        <h2 class="serif" style="font-size: 28px; line-height: 1.15; margin-bottom: 12px;">
+        <span class="eyebrow" style="margin-bottom: 4px;">FASE 4 · REVELACIÓN</span>
+        <h2 class="serif" style="font-size: 28px; line-height: 1.15; margin-bottom: 14px;">
           La Alquimia de Autor
         </h2>
 
-        <!-- CÁLIZ E INGREDIENTES -->
-        <div style="margin-bottom: 18px;">
-          <img src="56440.jpg" alt="Cáliz e Ingredientes" class="ingredients-img">
-        </div>
-
         <div class="card card-gold">
           <span class="eyebrow">ADN DE DESTILACIÓN</span>
-          <p class="text-body" style="margin-top: 6px; font-size: 14px;">
+          <p class="text-body" style="margin-top: 8px; font-size: 14px;">
             Una base propia de <strong>vodka artesanal de papa</strong> fermentado y destilado en alambique propio que otorga sedosidad inigualable, fusionada con destilado de cereal tradicional con enebro y coriandro. Sobre ella reposa la trilogía de tomates (fresco, seco curado y planta destilada en cobre), tallo de apio, jalapeño ahumado a la brasa, salsa inglesa y alcaparras.
           </p>
+
+          <span class="eyebrow" style="margin-top: 14px;">BOTÁNICOS DESCUBIERTOS EN SESIÓN</span>
+          <div class="botanicals-grid">
+            <div class="botanical-chip">
+              <strong>Enebro Alpino</strong>
+              Resina y bosque
+            </div>
+            <div class="botanical-chip">
+              <strong>Coriandro</strong>
+              Cítrico seco tostado
+            </div>
+            <div class="botanical-chip">
+              <strong>Planta de Tomate</strong>
+              Verde balsámico en cobre
+            </div>
+            <div class="botanical-chip">
+              <strong>Apio de Huerta</strong>
+              Fibra vegetal salina
+            </div>
+            <div class="botanical-chip">
+              <strong>Tomate Seco</strong>
+              Salinidad umami
+            </div>
+            <div class="botanical-chip">
+              <strong>Alcaparra Curada</strong>
+              Salmuera en lengua
+            </div>
+            <div class="botanical-chip">
+              <strong>Jalapeño Ahumado</strong>
+              Calor tibio a la brasa
+            </div>
+            <div class="botanical-chip">
+              <strong>Vodka de Papa</strong>
+              Textura sedosa de autor
+            </div>
+          </div>
         </div>
 
         <!-- SECCIÓN HISTORIA / ETIQUETA -->
-        <div style="margin: 24px 0 16px;">
+        <div class="card" style="margin-top: 20px;">
           <span class="eyebrow">LA LEYENDA DETRÁS DE LA ETIQUETA</span>
-          <h3 class="serif" style="font-size: 24px; margin-top: 4px; margin-bottom: 12px;">
+          <h3 class="serif" style="font-size: 24px; margin-top: 4px; margin-bottom: 10px;">
             Mary Tudor & El Mito Reeditado
           </h3>
-
-          <div style="margin-bottom: 14px;">
-            <img src="56439.jpg" alt="Mary Tudor - Etiqueta Warhola" class="history-img">
-          </div>
-
           <p class="text-body">
-            La ilustración rinde tributo a María I de Inglaterra —conocida en la leyenda popular como Mary Tudor—, figura a la que históricamente se le asoció el nacimiento mítico del cóctel Bloody Mary.
+            La identidad rinde tributo a María I de Inglaterra —conocida en la leyenda popular como Mary Tudor—, figura a la que históricamente se le asoció el nacimiento mítico del cóctel Bloody Mary.
           </p>
           <p class="text-body">
             En esta edición rescatamos ese mito no mediante salsas pesadas ni jugos industriales, sino destilando su alma: transformamos el mito de Mary Tudor en un gin cristalino gastronómico, donde la salinidad, el umami y el tomate viven en armonía sin precedentes.
           </p>
-
-          <div style="margin: 18px 0;">
-            <img src="52868.jpg" alt="Diseño de Etiqueta Ovalada" class="label-img">
-          </div>
+          <p class="text-mute" style="font-style: italic;">
+            "Destilado en pequeños lotes con paciencia de perfumista y precisión de cocinero."
+          </p>
         </div>
 
         <!-- SECCIÓN COCTELERÍA -->
-        <div style="margin: 28px 0 20px;">
-          <span class="eyebrow">LABORATORIO DE COCTELERÍA</span>
+        <div style="margin: 24px 0 16px;">
+          <span class="eyebrow">LABORATORIO DE COCTELERÍA DE AUTOR</span>
           <h3 class="serif" style="font-size: 24px; margin-top: 4px; margin-bottom: 12px;">
             Sunday Bloody Sunday
           </h3>
-
-          <!-- AFICHE PROMOCIONAL -->
-          <div style="margin-bottom: 16px;">
-            <img src="56095.jpg" alt="Sunday Bloody Sunday" class="promo-img">
-          </div>
 
           <!-- TABS DE RECETAS -->
           <div class="cocktail-tabs">
@@ -1111,10 +1151,10 @@
         ¿Tener esta experiencia en tu celular?
       </h4>
       <p class="text-mute" style="font-size: 12px; margin-bottom: 12px;">
-        Instálala en tu pantalla de inicio como una app o compártela con amigos y clientes en segundos.
+        Instálala en tu pantalla de inicio o compártela con clientes y colegas de barra.
       </p>
       <button class="btn-main" onclick="openMobileModal()" style="margin-top: 0; justify-content: center; gap: 8px;">
-        <span>Abrir Instrucciones y Código QR</span>
+        <span>Abrir Enlace e Instrucciones</span>
       </button>
     </section>
 
@@ -1146,7 +1186,7 @@
 
       <div class="modal-body">
         <p class="text-mute" style="margin-bottom: 14px;">
-          Esta aplicación funciona como una <strong>PWA web autónoma</strong>. No requiere descargas pesadas desde tiendas: se abre e instala al instante desde el navegador.
+          Esta aplicación funciona como una <strong>Web App autónoma</strong>. No requiere descargas pesadas desde tiendas: se abre e instala al instante desde el navegador.
         </p>
 
         <!-- ENLACE DIRECTO -->
@@ -1169,7 +1209,6 @@
         <div class="tab-pills">
           <button class="tab-pill-btn active" onclick="switchModalTab('android')" id="tab-btn-android">Android</button>
           <button class="tab-pill-btn" onclick="switchModalTab('iphone')" id="tab-btn-iphone">iPhone / iPad</button>
-          <button class="tab-pill-btn" onclick="switchModalTab('qr')" id="tab-btn-qr">Código QR</button>
         </div>
 
         <!-- CONTENIDO ANDROID -->
@@ -1211,16 +1250,6 @@
             <p class="text-mute">Presiona <strong>Agregar</strong> arriba a la derecha para tenerla como app nativa.</p>
           </div>
         </div>
-
-        <!-- CONTENIDO QR -->
-        <div id="modal-tab-qr" style="display: none; text-align: center;">
-          <p class="text-mute" style="margin-bottom: 10px;">
-            Apunta la cámara de cualquier celular hacia este código para abrir la app al instante:
-          </p>
-          <div style="background: #0c0a09; padding: 12px; border: 1px solid var(--gold); display: inline-block;">
-            <img id="qr-image" src="" alt="Código QR Warhola Gin" style="width: 180px; height: 180px; display: block;">
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -1229,7 +1258,7 @@
   <div class="toast-copy" id="toast">¡Copiado al portapapeles!</div>
 
   <!-- ===================================================================
-       LÓGICA JAVASCRIPT AUTOCONTENIDA
+       LÓGICA JAVASCRIPT AUTOCONTENIDA (CERO DEPENDENCIAS EXTERNAS)
        =================================================================== -->
   <script>
     // Inicialización del enlace
@@ -1237,11 +1266,6 @@
       const currentUrl = window.location.href;
       const input = document.getElementById('share-link-input');
       if (input) input.value = currentUrl;
-
-      const qrImg = document.getElementById('qr-image');
-      if (qrImg) {
-        qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=caa055&bgcolor=0c0a09&data=${encodeURIComponent(currentUrl)}`;
-      }
     });
 
     // Navegación de Fases
@@ -1323,7 +1347,7 @@
     }
 
     function switchModalTab(tabName) {
-      const tabs = ['android', 'iphone', 'qr'];
+      const tabs = ['android', 'iphone'];
       tabs.forEach(t => {
         const content = document.getElementById(`modal-tab-${t}`);
         const btn = document.getElementById(`tab-btn-${t}`);
