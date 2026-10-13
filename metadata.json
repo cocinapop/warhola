@@ -1,6 +1,0 @@
-{
-  "name": "Warhola Experience - Pop Art Gin Tasting",
-  "description": "Experiencia interactiva de cata sensorial Pop Art de 6 pasos para Warhola Pop: exploración aromática, perspectiva social, ADN botánico y certificado de autor.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
