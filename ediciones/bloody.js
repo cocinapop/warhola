@@ -406,5 +406,6 @@ window.WARHOLA_EDICIONES["bloody"]={
    "perfil": "Burbuja vibrante, notas herbales y un cosquilleo ahumado sutil."
   }
  ],
- "imgBase": "img/bloody/"
+ "imgBase": "img/bloody/",
+ "musica": {"titulo": "WARHOLA BLOODY", "spotify": "https://open.spotify.com/playlist/6drpHDqx9gFIo170w2zuqD"}
 };

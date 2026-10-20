@@ -13,6 +13,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
  "accent": "#d9617a",
  "intro": "Tenés en tus manos la Edición Rose Cucumber Almond de Warhola Gin. Un gin de autor de firma London Dry contemporánea, con un perfil floral, fresco y dulce que lo vuelve distinto. Vas a descubrir sus capas y sus acordes de a uno, con tu nariz y tu paladar. La idea detrás de la etiqueta se revela al final de la cata.",
  "imgBase": "img/rose-cucumber-almond/",
+ "musica": {"titulo": "WARHOLA ROSE CUCUMBER ALMOND", "spotify": "https://open.spotify.com/playlist/6fxzBfaooJsb1mJW4ow6OX"},
  "imagenes": {
   "hero": "hero.jpg",
   "bottle": "bottle.jpg",

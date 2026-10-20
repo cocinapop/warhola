@@ -56,6 +56,18 @@ ul.l{padding-left:18px;font-size:13.5px;line-height:1.7;margin-bottom:10px}
 .win input{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ink);padding:9px;font-size:12px;font-family:monospace}
 .qr{display:grid;place-items:center;padding:14px;background:#fff;margin:12px auto;width:240px;height:240px}.qr img{width:100%;height:100%;margin:0;object-fit:contain}
 .st{display:flex;gap:12px;margin-bottom:12px}.st i{font-style:normal;width:22px;height:22px;flex:none;background:var(--gold);color:#000;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:700}
+.edgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.edcard{display:block;text-align:left;padding:0;background:var(--card);border:1px solid var(--line);color:var(--ink);cursor:pointer;overflow:hidden;font:inherit}
+.edcard img{height:210px;margin:0;object-fit:cover;object-position:center 60%;border:0;max-height:none}
+.edcard .ci{display:block;padding:10px 12px 12px;border-top:3px solid var(--ec,var(--gold))}
+.edcard b{display:block;font-family:var(--serif);font-size:19px;line-height:1.15;font-weight:600}
+.edcard small{display:block;color:var(--mute);margin-top:4px;font-size:12px;line-height:1.35}
+.musfab{position:fixed;right:14px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:90;display:none;align-items:center;gap:6px;padding:11px 16px;background:var(--ac);color:#fff;border:1px solid var(--gold);border-radius:999px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.musfab.on{display:flex}
+.muspanel{position:fixed;left:0;right:0;bottom:0;z-index:95;background:var(--card);border-top:1px solid var(--gold);padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px));transform:translateY(115%);transition:transform .35s ease;pointer-events:none;max-width:640px;margin:0 auto}
+.muspanel.open{transform:none;pointer-events:auto}
+.muspanel header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.muspanel iframe{display:block;width:100%;height:352px;border:0;border-radius:12px;margin:0}
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ac);color:#fff;border:1px solid var(--gold);padding:10px 20px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;z-index:200;display:none}.toast.on{display:block;animation:up .25s}
 footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 
@@ -90,11 +102,13 @@ img.hero-img,img.history-img,img.promo-img,img.ingredients-img,img.bottle-img{ob
 <main class="wrap">
  <nav id="nav"></nav>
  <div id="view"></div>
- <footer><span>WARHOLA GIN · EDICIÓN BLOODY</span><span style="font-style:italic;text-transform:lowercase;color:var(--gold)">a bloody mary, distilled</span></footer>
+ <footer><span id="ftl">WARHOLA GIN</span><span id="ftr" style="font-style:italic;text-transform:lowercase;color:var(--gold)"></span></footer>
 </main>
 <div class="mod" id="mod" data-a="bk"><div class="win"><header><div><span class="eyebrow">Acceso móvil</span><b class="serif" style="font-size:19px">Compartir e instalar</b></div><button class="tb" data-a="mclose" aria-label="Cerrar">✕</button></header><div class="bd" id="mbd"></div></div></div>
 <div class="toast" id="toast"></div>
 <div class="sheet" id="gls" data-a="glc"><div class="sh"><span class="eyebrow">Glosario</span><h3 id="glt" style="margin:4px 0 8px"></h3><p id="gld"></p><div class="tip" id="glp"></div><button class="btn sec" data-a="glc" style="margin-top:6px">Entendido</button></div></div>
+<button class="musfab" id="musfab" data-a="mus" aria-label="Música de la cata">♫ Música</button>
+<div class="muspanel" id="muspanel" aria-hidden="true"><header><div><span class="eyebrow">Música para la cata</span><b class="serif" style="font-size:19px;display:block" id="mustt"></b></div><button class="tb" data-a="musx" aria-label="Cerrar música">✕</button></header><div id="musbody"></div><a class="btn sec" id="musapp" target="_blank" rel="noopener" style="text-decoration:none;margin-top:10px"><span>Abrir en la app de Spotify</span><span>↗</span></a><p class="mute" style="font-size:12px;margin:8px 0 0">Si el reproductor suena cortado, abrí la playlist en la app de Spotify y volvé a la cata: la música sigue de fondo.</p></div>
 <noscript><p style="padding:24px;text-align:center">Esta guía necesita JavaScript activado.</p></noscript>
 <script src="ediciones/indice.js"></script>
 <script>(window.WARHOLA_INDICE||[]).forEach(function(e){document.write('<script src="ediciones/'+e.id+'.js"><\/script>')})</script>
@@ -102,11 +116,12 @@ img.hero-img,img.history-img,img.promo-img,img.ingredients-img,img.bottle-img{ob
 <script>
 var ED=window.WARHOLA_EDICIONES||{},GLO=window.WARHOLA_GLOSARIO||{},QS=new URLSearchParams(location.search),EID=QS.get("edition")||QS.get("e")||window.WARHOLA_DEFAULT||"bloody",NF=!ED[EID],E=ED[EID]||ED[window.WARHOLA_DEFAULT||"bloody"]||ED[Object.keys(ED)[0]];
 if(!E){document.getElementById("view").innerHTML='<div class="card"><h3>No se pudieron cargar las ediciones</h3><p class="mute">Falta la carpeta ediciones junto a index.html.</p></div>';throw new Error("sin ediciones")}
-if(E.imgBase&&E.imagenes&&!E.imgDone){Object.keys(E.imagenes).forEach(function(k){E.imagenes[k]=E.imgBase+E.imagenes[k]});E.imgDone=1}
+Object.keys(ED).forEach(function(k){var X=ED[k];if(X.imgBase&&X.imagenes&&!X.imgDone){Object.keys(X.imagenes).forEach(function(i){X.imagenes[i]=X.imgBase+X.imagenes[i]});X.imgDone=1}});
 var D=Object.assign({},E,{historiaEtiqueta:E.historia}),FAM=E.familias,NOTES=E.notas,ACC=E.acordes,TIERS=E.piramide,AX=E.ejes.map(function(e){return e[0]}),AXD=E.ejes.map(function(e){return e[1]}),GAR=E.serve.garnish,RAT=E.serve.proporciones;
 Object.assign(GLO,E.glosario||{});
 var ACTS=["Atelier","Nariz","Boca","Pirámide","Atelier de acordes","Huella sensorial","Revelación","Tu sello"];
 var S=window.S={labv:0,lib:0,lview:null,cmp:[],cmpv:0,fid:null,pista:null,max:0,lb:[null,null],lr:null,coll:[],rd:[0,0,0,0,0],gar:null,rat:null,dsh:null,alias:"",sealOn:0,snd:0,lv:"",hint:"",a:0,n:[],b:[],fo:null,last:null,P:[[],[],[]],ton:false,tier:0,vis:[0,0,0],ck:0,rt:[0,0,0],tab:"compartir",inst:null,tm:null};
+S.home=!QS.get("edition")&&!QS.get("e")&&Object.keys(ED).filter(function(k){return k[0]!="_"}).length>1;
 var $=function(s){return document.querySelector(s)};
 var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
 var nid=function(id){return NOTES.filter(function(n){return n.id==id})[0]};
@@ -137,9 +152,10 @@ function libNote(id,v){var a=libGet();a.forEach(function(x){if(x.id==id)x.nt=v})
 function fdate(t){try{return new Date(t).toLocaleDateString("es-AR",{day:"numeric",month:"short",year:"numeric"})}catch(e){return""}}
 function ffound(f){var u=[];f.n.concat(f.b,f.P[0],f.P[1],f.P[2]).forEach(function(i){if(u.indexOf(i)<0)u.push(i)});return u}
 function save(){var a=libGet(),old=a.filter(function(x){return x.id==S.fid})[0],f={id:S.fid||(E.id+"-"+Date.now()),ed:E.id,nm:E.sub,t:old?old.t:Date.now(),u:Date.now(),al:S.alias||"",n:S.n.slice(),b:S.b.slice(),P:S.P.map(function(p){return p.slice()}),coll:coll(),rd:S.rd.slice(),gar:S.gar,rat:S.rat,dsh:S.dsh,xp:xp(),lv:lvl(),nt:old?old.nt:"",rev:old?(old.rev||0)+1:0};a=a.filter(function(x){return x.id!=f.id});a.unshift(f);S.fid=f.id;toast(libSet(a)?(old?"Ficha actualizada":"Guardada en tu biblioteca"):"No se pudo guardar en este dispositivo")}
-function recata(f){if(f.ed!=E.id){location.href=location.pathname+"?edition="+encodeURIComponent(f.ed);return}S.n=f.n.slice();S.b=f.b.slice();S.P=f.P.map(function(p){return p.slice()});S.rd=f.rd.slice();S.gar=f.gar;S.rat=f.rat;S.dsh=f.dsh;S.coll=f.coll.slice();S.alias=f.al;S.fid=f.id;S.lib=0;S.lview=null;S.ton=false;S.tier=0;S.vis=[0,0,0];S.a=0;S.max=7;S.sealOn=0;render();sc()}
+function recata(f){if(f.ed!=E.id){location.href=location.pathname+"?edition="+encodeURIComponent(f.ed);return}S.n=f.n.slice();S.b=f.b.slice();S.P=f.P.map(function(p){return p.slice()});S.rd=f.rd.slice();S.gar=f.gar;S.rat=f.rat;S.dsh=f.dsh;S.coll=f.coll.slice();S.alias=f.al;S.fid=f.id;S.lib=0;S.home=0;S.lview=null;S.ton=false;S.tier=0;S.vis=[0,0,0];S.a=0;S.max=7;S.sealOn=0;render();sc()}
+function actHome(){var ids=Object.keys(ED).filter(function(k){return k[0]!="_"}),n=libGet().length;return '<div class="hero"><span class="badge s">Warhola Gin</span><h1 class="serif">Elegí tu gin</h1><p class="mute" style="max-width:340px;margin:0 auto">Cada edición tiene su propia cata guiada. Elegí una y empezá.</p></div><div class="edgrid">'+ids.map(function(k){var X=ED[k];return '<button class="edcard" data-a="ed" data-id="'+k+'" style="--ec:'+(X.accent||"var(--gold)")+'">'+IMG(X.imagenes&&X.imagenes.bottle,"edimg","Botella Warhola Gin · "+X.sub)+'<span class="ci"><b>'+esc(X.sub)+'</b><small>'+esc(X.tagline||"")+'</small></span></button>'}).join("")+'</div>'+(LAB?'<button class="btn" data-a="labgo"><span>Laboratorio: armá tu gin</span><span>⚗</span></button>':"")+(n?'<button class="btn sec" data-a="lib">Mi biblioteca de catas ('+n+')</button>':"")}
 function actNF(){var ids=Object.keys(ED).filter(function(k){return k[0]!="_"});return '<span class="eyebrow">Ediciones Warhola</span><h2>Esta edición todavía no está disponible</h2><p>No encontramos «'+esc(EID)+'». Elegí una de las ediciones disponibles:</p>'+ids.map(function(k){return '<button class="opt" data-a="ed" data-id="'+k+'"><b>'+esc(ED[k].sub)+'</b><small>'+esc(ED[k].tagline||"")+'</small></button>'}).join("")}
-function edBlock(){var ids=Object.keys(ED).filter(function(k){return k[0]!="_"&&k!=E.id}),n=libGet().length,h="";if(LAB)h+='<button class="btn" data-a="labgo"><span>Laboratorio: armá tu gin</span><span>⚗</span></button>';if(n)h+='<button class="btn sec" data-a="lib">Mi biblioteca de catas ('+n+')</button>';if(ids.length)h+='<span class="eyebrow" style="margin:16px 0 4px">Otras ediciones</span>'+ids.map(function(k){return '<button class="opt" data-a="ed" data-id="'+k+'"><b>'+esc(ED[k].sub)+'</b><small>'+esc(ED[k].tagline||"")+'</small></button>'}).join("");return h}
+function edBlock(){var ids=Object.keys(ED).filter(function(k){return k[0]!="_"&&k!=E.id}),n=libGet().length,h="";if(LAB)h+='<button class="btn" data-a="labgo"><span>Laboratorio: armá tu gin</span><span>⚗</span></button>';if(n)h+='<button class="btn sec" data-a="lib">Mi biblioteca de catas ('+n+')</button>';if(ids.length)h+='<button class="btn sec" data-a="home">Ver todas las ediciones</button><span class="eyebrow" style="margin:16px 0 4px">Otras ediciones</span>'+ids.map(function(k){return '<button class="opt" data-a="ed" data-id="'+k+'"><b>'+esc(ED[k].sub)+'</b><small>'+esc(ED[k].tagline||"")+'</small></button>'}).join("");return h}
 function actLib(){var a=libGet(),h='';
  if(S.lview){var f=a.filter(function(x){return x.id==S.lview})[0];if(f)return libDetail(f);S.lview=null}
  if(S.cmpv&&S.cmp.length==2)return libCmp(a);
@@ -151,7 +167,7 @@ function actLib(){var a=libGet(),h='';
 function libDetail(f){var X=ED[f.ed]||E,fo=ffound(f);return '<span class="eyebrow">'+esc(X.sub)+' · '+fdate(f.u)+'</span><h2>'+esc(f.al||"Cata sin alias")+'</h2><p class="serif" style="font-size:20px;font-style:italic;color:var(--gold)">'+esc(f.lv)+' · '+f.xp+' pts · '+fo.length+' notas</p>'+pyr(f.P,X,0)+'<div class="card"><span class="eyebrow" style="margin-bottom:6px">Notas detectadas</span><div>'+fo.map(function(id){return '<span class="chip">'+nlX(X,id)+'</span>'}).join("")+'</div>'+(f.coll.length?'<span class="eyebrow" style="margin:12px 0 4px">Acordes</span><div>'+f.coll.map(function(c){return '<span class="chip">'+esc(c)+'</span>'}).join("")+'</div>':"")+'</div><div class="card"><span class="eyebrow">Huella sensorial</span>'+radarSvg(f.rd,null,0,X)+'</div><span class="eyebrow">Mis notas</span><textarea class="inp" rows="4" placeholder="Escribí lo que quieras recordar de esta cata…" oninput="libNote(\''+f.id+'\',this.value)">'+esc(f.nt||"")+'</textarea><button class="btn" data-a="lre" data-id="'+f.id+'"><span>Re-catar y actualizar</span><span>↻</span></button><button class="btn sec" data-a="libx">‹ Volver</button>'}
 function libCmp(a){var A=a.filter(function(x){return x.id==S.cmp[0]})[0],B=a.filter(function(x){return x.id==S.cmp[1]})[0];if(!A||!B){S.cmpv=0;return actLib()}var X=ED[A.ed]||E,fa=ffound(A),fb=ffound(B),both=fa.filter(function(i){return fb.indexOf(i)>=0}),oa=fa.filter(function(i){return fb.indexOf(i)<0}),ob=fb.filter(function(i){return fa.indexOf(i)<0}),ch=function(l){return l.length?l.map(function(id){return '<span class="chip">'+nlX(X,id)+'</span>'}).join(""):'<span class="mute">—</span>'};
  return '<span class="eyebrow">'+esc(X.sub)+'</span><h2>Comparar catas</h2><p class="mute"><b style="color:var(--gold)">A</b> · '+fdate(A.u)+' · '+esc(A.al||"sin alias")+'<br><b style="color:#d0453b">B</b> · '+fdate(B.u)+' · '+esc(B.al||"sin alias")+'</p>'+radarSvg(A.rd,B.rd,0,X)+'<div class="card"><span class="eyebrow">En las dos</span><div>'+ch(both)+'</div><span class="eyebrow" style="margin-top:12px">Solo en A</span><div>'+ch(oa)+'</div><span class="eyebrow" style="margin-top:12px">Solo en B</span><div>'+ch(ob)+'</div></div><div class="card"><p style="margin:0">Notas: A '+fa.length+' · B '+fb.length+'. Puntos: A '+A.xp+' · B '+B.xp+'.</p></div><button class="btn sec" data-a="libx">‹ Volver</button>'}
-function nav(){if(NF||S.lib||S.labv){$("#nav").innerHTML='<div class="prog"><b>'+(NF?"Ediciones":S.labv?"Laboratorio de gin":"Mi biblioteca de catas")+'</b><span>'+(S.labv?"Armá tu gin":libGet().length+" fichas")+'</span></div>';return}$("#nav").innerHTML='<div class="prog"><b>'+(S.a?"Acto "+S.a+" de 7 · ":"")+ACTS[S.a]+'</b><span>'+lvl()+' · '+xp()+' pts</span></div><div class="seg">'+ACTS.map(function(n,i){return '<button class="'+(i<=S.a?"on":"")+'"'+(i<=S.max?' data-a="ph" data-i="'+i+'"':" disabled")+' aria-label="'+n+'"></button>'}).join("")+'</div>'}
+function nav(){if(S.home&&!NF&&!S.lib&&!S.labv){$("#nav").innerHTML='<div class="prog"><b>Ediciones</b><span>'+Object.keys(ED).length+' gins</span></div>';return}if(NF||S.lib||S.labv){$("#nav").innerHTML='<div class="prog"><b>'+(NF?"Ediciones":S.labv?"Laboratorio de gin":"Mi biblioteca de catas")+'</b><span>'+(S.labv?"Armá tu gin":libGet().length+" fichas")+'</span></div>';return}$("#nav").innerHTML='<div class="prog"><b>'+(S.a?"Acto "+S.a+" de 7 · ":"")+ACTS[S.a]+'</b><span>'+lvl()+' · '+xp()+' pts</span></div><div class="seg">'+ACTS.map(function(n,i){return '<button class="'+(i<=S.a?"on":"")+'"'+(i<=S.max?' data-a="ph" data-i="'+i+'"':" disabled")+' aria-label="'+n+'"></button>'}).join("")+'</div>'}
 function som(t){return '<div class="som"><i>S</i><p id="somt">'+t+'</p></div>'}
 function advice(m){var sel=m=="n"?S.n:S.b,L=S.last&&nid(S.last);
  if(!sel.length)return m=="n"?"Cerrá los ojos y dejá que el aroma llegue solo. Elegí la familia que más se acerque; no hay respuestas incorrectas.":"Un sorbo pequeño. Recorré toda la boca, tragá y quedate quieto. Después elegí lo que sentís en la lengua.";
@@ -224,7 +240,7 @@ function seal(){var c=$("#cv");if(!c||!c.getContext)return;var x=c.getContext("2
  x.textAlign="left";x.fillStyle=G;x.font="600 18px Arial,sans-serif";x.fillText("ACORDES",400,830);x.fillStyle="#f5eedf";x.font="22px Georgia,serif";var cl=coll();cl.slice(0,5).forEach(function(n,i){x.fillText("· "+cut(n,22),400,870+i*38)});if(!cl.length){x.fillStyle="#998e82";x.fillText("—",400,870)}
  x.textAlign="center";x.fillStyle="#998e82";x.font="italic 20px Georgia,serif";if(S.rat!==null&&S.gar!==null)x.fillText(cut("Mi serve: "+RAT[S.rat][0]+" · "+GAR[S.gar][0].toLowerCase(),52),W/2,1030);x.font="16px Arial,sans-serif";x.fillText(new Date().toLocaleDateString("es-AR"),W/2,1062);
  var dl=$("#dl");if(dl){try{dl.href=c.toDataURL("image/png")}catch(e){}}}
-function render(keep){var y=window.scrollY;if(S.a>S.max)S.max=S.a;nav();var v=NF?actNF():S.labv&&LAB?LAB.view():S.lib?actLib():[act0,act1,act2,act3,actLab,actRad,act6,actSello][S.a]();$("#view").innerHTML='<section class="'+(keep?"":"pnl")+'">'+v+'</section>';if(keep)window.scrollTo(0,y);tmDraw();var L=lvl();if(S.lv&&L!=S.lv&&S.a>0){toast("Nivel: "+L);vib();chime()}S.lv=L}
+function render(keep){var y=window.scrollY;if(S.a>S.max)S.max=S.a;nav();var v=NF?actNF():S.labv&&LAB?LAB.view():S.lib?actLib():S.home?actHome():[act0,act1,act2,act3,actLab,actRad,act6,actSello][S.a]();$("#view").innerHTML='<section class="'+(keep?"":"pnl")+'">'+v+'</section>';if(keep)window.scrollTo(0,y);tmDraw();var L=lvl();if(S.lv&&L!=S.lv&&S.a>0){toast("Nivel: "+L);vib();chime()}S.lv=L}
 
 function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");setTimeout(function(){t.classList.remove("on")},2200)}
 function copy(txt,m){var ok=function(){toast(m)};if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(ok,function(){fb()});else fb();function fb(){var i=document.createElement("textarea");i.value=txt;document.body.appendChild(i);i.select();try{document.execCommand("copy")}catch(e){}document.body.removeChild(i);ok()}}
@@ -240,7 +256,7 @@ function modal(){var t=S.tab,u=url();
 document.addEventListener("click",function(e){var t=e.target.closest("[data-a]");if(!t)return;var a=t.dataset.a,d=t.dataset,i=+d.i;
  if(a=="bk"){if(e.target.id=="mod")$("#mod").classList.remove("open");return}
  if(a.indexOf("lab")==0){if(LAB)LAB.act(a,d,e);return}
- if(a=="ph"){S.lib=0;S.labv=0;S.a=i;if(i>S.max)S.max=i;clearInterval(S.ti);S.tm=null;render();sc()}
+ if(a=="ph"){S.home=0;S.lib=0;S.labv=0;S.a=i;if(i>S.max)S.max=i;clearInterval(S.ti);S.tm=null;render();sc()}
  else if(a=="note"){var n=nid(d.id),arr=n.m=="n"?S.n:S.b,x=arr.indexOf(d.id);x<0?arr.push(d.id):arr.splice(x,1);S.last=d.id;vib();render(1)}
  else if(a=="fam"){S.fo=S.fo==d.id?null:d.id;render(1)}
  else if(a=="tm"){timer(+d.s)}
@@ -256,6 +272,9 @@ document.addEventListener("click",function(e){var t=e.target.closest("[data-a]")
  else if(a=="sv"){if(d.k=="gar")S.gar=i;else if(d.k=="rat")S.rat=i;else S.dsh=i;vib();render(1)}
  else if(a=="seal"){S.sealOn=1;render(1);seal();setTimeout(function(){var c=$("#cv");if(c&&c.scrollIntoView)c.scrollIntoView({behavior:"smooth",block:"center"})},60)}
  else if(a=="ssh"){var cv=$("#cv");if(cv)cv.toBlob(function(b){var f=new File([b],"sello-warhola.png",{type:"image/png"});if(navigator.canShare&&navigator.canShare({files:[f]}))navigator.share({files:[f],text:"Mi sello de catador · Warhola Gin "+E.marca}).catch(function(){});else toast("Mantené apretada la imagen para guardarla")})}
+ else if(a=="home"){location.href=location.pathname}
+ else if(a=="mus")musOpen();
+ else if(a=="musx")musClose();
  else if(a=="snd"){S.snd=S.snd?0:1;$("#snd").classList.toggle("act");chime()}
  else if(a=="lib"){S.labv=0;S.lib=1;S.lview=null;S.cmpv=0;render();sc()}
  else if(a=="libx"){if(S.cmpv)S.cmpv=0;else if(S.lview)S.lview=null;else S.lib=0;render();sc()}
@@ -281,7 +300,13 @@ document.addEventListener("click",function(e){var t=e.target.closest("[data-a]")
  else if(a=="sh")navigator.share({title:"Warhola Gin · "+E.sub,url:url()}).catch(function(){});
  else if(a=="inst"&&S.inst){S.inst.prompt();S.inst=null;modal()}});
 window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();S.inst=e});
-document.title="WARHOLA Gin · "+E.sub;if(E.accent)document.documentElement.style.setProperty("--ac",E.accent);$("#bsub").textContent=E.sub;
+function musId(){var m=E.musica&&E.musica.spotify&&E.musica.spotify.match(/playlist\/([A-Za-z0-9]+)/);return m?m[1]:""}
+function musOpen(){var id=musId();if(!id)return;var b=$("#musbody");if(!b.firstChild||!b.dataset.id){b.innerHTML='<iframe src="https://open.spotify.com/embed/playlist/'+id+'?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Playlist de Spotify"></iframe>';b.dataset.id=id}$("#muspanel").classList.add("open");$("#muspanel").setAttribute("aria-hidden","false")}
+function musClose(){$("#muspanel").classList.remove("open");$("#muspanel").setAttribute("aria-hidden","true")}
+function musInit(){var id=musId();if(!id||S.home||NF)return;$("#mustt").textContent=E.musica.titulo||E.sub;$("#musapp").setAttribute("href","https://open.spotify.com/playlist/"+id);$("#musfab").classList.add("on")}
+var HM=S.home||NF;document.title=HM?"WARHOLA Gin":"WARHOLA Gin · "+E.sub;if(E.accent&&!HM)document.documentElement.style.setProperty("--ac",E.accent);$("#bsub").textContent=HM?"Elegí tu gin":E.sub;
+$("#ftl").textContent="WARHOLA GIN"+(HM?"":" · "+(/^edici/i.test(E.sub)?E.sub:"Edición "+E.sub).toUpperCase());$("#ftr").textContent=HM?"":(E.lema||"");
+musInit();
 render();
 </script>
 </body>
