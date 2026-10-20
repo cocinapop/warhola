@@ -21,7 +21,7 @@ window.WARHOLA_EDICIONES["superstar"]={
  },
  "musica": {
   "titulo": "WARHOLA SUPERSTAR",
-  "spotify": ""
+  "spotify": "https://open.spotify.com/playlist/2kIcrjeDnjknpW4xl8OYwo"
  },
  "tema": {
   "dark": {
