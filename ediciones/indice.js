@@ -11,7 +11,8 @@
 window.WARHOLA_DEFAULT="bloody";
 window.WARHOLA_INDICE=[
  {id:"bloody"},
- {id:"rose-cucumber-almond"}
+ {id:"rose-cucumber-almond"},
+ {id:"superstar"}
 ];
 window.WARHOLA_GLOSARIO={
  "umami": {
