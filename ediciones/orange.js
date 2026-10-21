@@ -336,14 +336,23 @@ window.WARHOLA_EDICIONES["orange"]={
    "seg": 30
   },
   {
+   "k": "Boca",
+   "s": "Paladar",
+   "tm": "Primer sorbo con tónica",
+   "t": "Tomá un sorbo y dejá que la burbuja recorra toda la boca. La tónica suma burbuja y un amargor suave: fijate qué se siente primero y cómo cambia el gin.",
+   "n": [
+    "b1",
+    "b2",
+    "b3"
+   ],
+   "seg": 10
+  },
+  {
    "k": "Fondo",
    "s": "Paladar",
    "tm": "Después de tragar",
    "t": "Tragá y quedate quieto. Seguí lo que queda en la boca y en la garganta.",
    "n": [
-    "b1",
-    "b2",
-    "b3",
     "b4",
     "b5"
    ],

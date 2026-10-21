@@ -273,16 +273,25 @@ window.WARHOLA_EDICIONES["bloody"]={
    "seg": 30
   },
   {
+   "k": "Boca",
+   "s": "Paladar",
+   "tm": "Primer sorbo con tónica",
+   "t": "Tomá un sorbo y dejá que la burbuja recorra toda la boca. La tónica suma burbuja y un amargor suave: fijate qué se siente primero y cómo cambia el gin.",
+   "n": [
+    "b1",
+    "b2",
+    "b5"
+   ],
+   "seg": 10
+  },
+  {
    "k": "Fondo",
    "s": "Paladar",
    "tm": "Después de tragar",
    "t": "Tragá y quedate quieto. Seguí lo que queda en la boca y en la garganta.",
    "n": [
-    "b1",
-    "b2",
     "b3",
-    "b4",
-    "b5"
+    "b4"
    ],
    "seg": 10
   }
@@ -407,6 +416,40 @@ window.WARHOLA_EDICIONES["bloody"]={
   }
  ],
  "imgBase": "img/bloody/",
- "musica": {"titulo": "WARHOLA BLOODY", "spotify": "https://open.spotify.com/playlist/6drpHDqx9gFIo170w2zuqD"},
- "tema": {"dark": {"--bg": "#0e0809", "--card": "#170e0f", "--card2": "#1f1214", "--line": "#33201f", "--ink": "#f5eedf", "--mute": "#aa9d91", "--ac": "#b3261e", "--acs": "rgba(179,38,30,.22)", "--gold": "#d3a95c", "--golds": "rgba(211,169,92,.14)", "--green": "#6aa377", "--bgimg": "radial-gradient(ellipse at 50% -8%,rgba(179,38,30,.30),transparent 58%),radial-gradient(ellipse at 50% 108%,rgba(211,169,92,.10),transparent 55%),url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Ccircle cx='15' cy='15' r='1.3' fill='rgba(211,169,92,0.10)'/%3E%3C/svg%3E\")", "--bgsz": "auto,auto,30px 30px"}, "light": {"--bg": "#f7efe6", "--card": "#ffffff", "--card2": "#f1e5d9", "--line": "#dccab8", "--ink": "#1c1412", "--mute": "#554a42", "--ac": "#8a1c1c", "--acs": "rgba(138,28,28,.09)", "--gold": "#7a5a22", "--golds": "rgba(122,90,34,.12)", "--green": "#2e5938", "--bgimg": "radial-gradient(ellipse at 50% -8%,rgba(179,38,30,.16),transparent 58%),url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Ccircle cx='15' cy='15' r='1.3' fill='rgba(122,90,34,0.12)'/%3E%3C/svg%3E\")", "--bgsz": "auto,30px 30px"}}
+ "musica": {
+  "titulo": "WARHOLA BLOODY",
+  "spotify": "https://open.spotify.com/playlist/6drpHDqx9gFIo170w2zuqD"
+ },
+ "tema": {
+  "dark": {
+   "--bg": "#0e0809",
+   "--card": "#170e0f",
+   "--card2": "#1f1214",
+   "--line": "#33201f",
+   "--ink": "#f5eedf",
+   "--mute": "#aa9d91",
+   "--ac": "#b3261e",
+   "--acs": "rgba(179,38,30,.22)",
+   "--gold": "#d3a95c",
+   "--golds": "rgba(211,169,92,.14)",
+   "--green": "#6aa377",
+   "--bgimg": "radial-gradient(ellipse at 50% -8%,rgba(179,38,30,.30),transparent 58%),radial-gradient(ellipse at 50% 108%,rgba(211,169,92,.10),transparent 55%),url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Ccircle cx='15' cy='15' r='1.3' fill='rgba(211,169,92,0.10)'/%3E%3C/svg%3E\")",
+   "--bgsz": "auto,auto,30px 30px"
+  },
+  "light": {
+   "--bg": "#f7efe6",
+   "--card": "#ffffff",
+   "--card2": "#f1e5d9",
+   "--line": "#dccab8",
+   "--ink": "#1c1412",
+   "--mute": "#554a42",
+   "--ac": "#8a1c1c",
+   "--acs": "rgba(138,28,28,.09)",
+   "--gold": "#7a5a22",
+   "--golds": "rgba(122,90,34,.12)",
+   "--green": "#2e5938",
+   "--bgimg": "radial-gradient(ellipse at 50% -8%,rgba(179,38,30,.16),transparent 58%),url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Ccircle cx='15' cy='15' r='1.3' fill='rgba(122,90,34,0.12)'/%3E%3C/svg%3E\")",
+   "--bgsz": "auto,30px 30px"
+  }
+ }
 };
