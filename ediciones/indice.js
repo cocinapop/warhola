@@ -60,5 +60,25 @@ window.WARHOLA_GLOSARIO={
   "t": "¿Qué es el cuerpo?",
   "d": "Es la sensación de peso y textura en la boca: puede ser ligero y acuoso, o sedoso y redondo. Se siente con la lengua, no con la nariz.",
   "tip": "Fijate si el trago se siente entero y suave o con aristas."
+ },
+ "gusto": {
+  "t": "Gusto: lo que detecta la lengua",
+  "d": "La lengua reconoce solo cinco gustos: dulce, ácido, amargo, salado y umami. Todo lo demás que solemos llamar «sabor» viene en realidad de la nariz.",
+  "tip": "Fijate qué gusto aparece primero y cuál se queda."
+ },
+ "retronasal": {
+  "t": "Retrogusto nasal",
+  "d": "Es el olfato desde adentro: al tragar y exhalar, los aromas suben por detrás de la garganta hasta la nariz. Por eso un mismo gin puede oler distinto por afuera que por adentro.",
+  "tip": "Tapate la nariz al tragar y soltala después: el sabor aparece de golpe."
+ },
+ "sabor": {
+  "t": "Sabor",
+  "d": "El sabor es la experiencia completa: el gusto de la lengua, el aroma que sube por la nariz al exhalar y las sensaciones de la boca, como el cuerpo, el calor o la burbuja.",
+  "tip": "Olor, gusto y sabor son tres maneras de contar el mismo trago."
+ },
+ "persistencia": {
+  "t": "Persistencia",
+  "d": "Es cuánto tiempo siguen presentes las sensaciones después de tragar. Cuanto más dura, más larga es la persistencia, también llamada final.",
+  "tip": "Quedate quieto y contá cuántos segundos siguen las sensaciones."
  }
 };

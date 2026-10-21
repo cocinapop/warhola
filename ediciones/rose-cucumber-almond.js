@@ -347,7 +347,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
    "k": "Boca",
    "s": "Paladar",
    "tm": "Primer sorbo con tónica",
-   "t": "Tomá un sorbo y dejá que la burbuja recorra toda la boca. La tónica suma burbuja y un amargor suave: fijate qué se siente primero y cómo cambia el gin.",
+   "t": "Tomá un sorbo y dejá que la burbuja recorra toda la boca. La tónica suma burbuja y un amargor suave: fijate qué se siente primero y cómo cambia el gin. Después tragá, cerrá la boca y exhalá suave por la nariz: ¿aparece algo que no habías olido?",
    "n": [
     "b3",
     "b1",
