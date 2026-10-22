@@ -15,8 +15,11 @@ window.WARHOLA_EDICIONES["coke"]={
  "imagenes": {
   "hero": "hero.jpg",
   "bottle": "bottle.jpg",
+  "ingredients": "ingredients.jpg",
   "label": "label.jpg",
-  "promo": "promo.jpg"
+  "history": "history.jpg",
+  "promo": "promo.jpg",
+  "extra": "extra.jpg"
  },
  "musica": {
   "titulo": "WARHOLA COKE",
