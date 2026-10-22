@@ -122,6 +122,7 @@ b("genciana","Genciana","raiz","rai","f","Amargo",2,"","#c0a040","amargo terroso
 b("galanga","Galanga","raiz","rai","c","Raíz",2,"cineol zingibereno","#e0d0a0","pino, jengibre, cítrico");
 b("almendra","Almendra","semilla","dul","f","Dulce",2,"benzaldehido","#d8c3a0","almendra amarga, mazapán","","El benzaldehído es el aroma típico de la almendra amarga.");
 b("vainilla","Vainilla","vaina","dul","f","Dulce",2,"vainillina","#d9b88a","dulce, cremosa","","La vainillina redondea y suma un fondo dulce.");
+b("nuezcola","Nuez de cola","nuez","dul","f","Tostado",2,"pirazina","#5a3a22","tostado, amargo suave, de cola");
 b("cacao","Cacao","grano","dul","f","Tostado",2,"pirazina","#4a2a1a","chocolate amargo, tostado");
 b("cafe","Café","grano","dul","f","Tostado",3,"pirazina furfuriltiol","#3a2418","café tostado, intenso","d");
 b("avellana","Avellana","nuez","dul","f","Tostado",2,"pirazina","#b08a5a","tostada, cremosa");
@@ -148,6 +149,7 @@ var PRE=[
 {n:"Especias de invierno",d:"Cálido y abrigado.",sty:"oldtom",bas:"malta",abv:43,dose:{enebro:3,cardamomo:2,canela:1,pimienta:2,naranja:2,jengibre:1,regaliz:1}},
 {n:"Fuego y humo",d:"Ahumado y tostado.",sty:"autor",bas:"papa",abv:47,dose:{enebro:3,coriandro:1,pimenton:2,roble:2,jalapeno:1,cacao:1}},
 {n:"Inspirado en Rose Cucumber Almond",d:"Dosis ilustrativas.",sty:"autor",bas:"cereal",abv:40,dose:{enebro:3,coriandro:2,angelica:1,tilo:1,limon:1,lavanda:1,rosa:2,pepino:2,almendra:3}},
+{n:"Inspirado en Coke",d:"Dosis ilustrativas.",sty:"autor",bas:"cereal",abv:40,dose:{enebro:3,coriandro:2,cilantro:1,angelica:1,regaliz:1,naranja:2,limon:1,lima:1,anisestrellado:1,canela:1,vainilla:1,nuezcola:1}},
 {n:"Inspirado en Play",d:"Dosis ilustrativas.",sty:"autor",bas:"cereal",abv:40,dose:{enebro:3,coriandro:2,angelica:1,regaliz:1,melon:2,frutilla:2,mandarina:2,lima:1,menta:2,jengibre:1,vainilla:1}},
 {n:"Inspirado en Orange",d:"Dosis ilustrativas.",sty:"london",bas:"cereal",abv:40,dose:{enebro:3,coriandro:2,angelica:1,regaliz:1,naranja:3,albahaca:2}},
 {n:"Inspirado en Superstar",d:"Dosis ilustrativas.",sty:"london",bas:"cereal",abv:43,dose:{enebro:3,coriandro:2,angelica:1,regaliz:1,limon:2,lavanda:1,pepino:2}},
@@ -176,7 +178,8 @@ var ACR=[
 ["Rosa, pepino y almendra",["rosa","pepino","almendra"],3,"Floral, fresco y dulce: es el corazón aromático de nuestra Edición Rose Cucumber Almond."],
 ["Lavanda, limón y pepino",["lavanda","limon","pepino"],3,"Floral, cítrico y fresco: es el corazón aromático de nuestra Edición Superstar."],
 ["Naranja y albahaca",["naranja","albahaca"],2,"Cítrico jugoso y verde anisado: es la pareja protagonista de nuestra Edición Orange."],
-["Melón, frutilla y menta",["melon","frutilla","menta"],3,"Fruta acuosa, fruta roja y frescor helado: es el corazón aromático de nuestra Edición Play."]];
+["Melón, frutilla y menta",["melon","frutilla","menta"],3,"Fruta acuosa, fruta roja y frescor helado: es el corazón aromático de nuestra Edición Play."],
+["Canela, anís y vainilla",["canela","anisestrellado","vainilla"],3,"Especias dulces de postre: son el corazón aromático de nuestra Edición Coke."]];
 function fc(A,f){return A.ids.filter(function(i){return B[i].f==f}).length}
 var MS=[
 ["clasico","Clásico perfecto","Armá un London Dry con armonía de 80 o más.",function(A){return L.sty=="london"&&A.score>=80}],

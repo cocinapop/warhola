@@ -14,7 +14,8 @@ window.WARHOLA_INDICE=[
  {id:"rose-cucumber-almond"},
  {id:"superstar"},
  {id:"orange"},
- {id:"play"}
+ {id:"play"},
+ {id:"coke"}
 ];
 window.WARHOLA_GLOSARIO={
  "umami": {
