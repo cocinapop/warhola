@@ -36,6 +36,7 @@ b("membrillo","Membrillo","fruta","fru","c","Frutal",2,"esteres damascenona","#e
 b("durazno","Durazno","fruta","fru","c","Frutal",2,"gamalact esteres","#f5b27a","durazno maduro, cremoso");
 b("damasco","Damasco","fruta","fru","c","Frutal",2,"gamalact ionona","#f2a65a","damasco, dulce y floral");
 b("banana","Banana","fruta","fru","c","Frutal",2,"isoamilo esteres","#f2dc6b","banana madura, dulce y cremosa");
+b("melon","Melón","fruta","fru","s","Frutal",2,"esteres nonadienal","#bde39a","melón maduro, fresco y acuoso");
 b("frutilla","Frutilla","cereza","fru","s","Frutal",2,"furaneol esteres","#e0405a","frutilla, caramelo suave");
 b("frambuesa","Frambuesa","cereza","fru","c","Frutal",2,"cetonaframb ionona","#c2305a","frambuesa, floral y ácida");
 b("moscatel","Uva moscatel","uva","fru","c","Frutal",2,"linalool geraniol","#c9d46a","uva perfumada, floral","","La uva moscatel es rica en monoterpenos: linalool y geraniol.");
@@ -147,6 +148,7 @@ var PRE=[
 {n:"Especias de invierno",d:"Cálido y abrigado.",sty:"oldtom",bas:"malta",abv:43,dose:{enebro:3,cardamomo:2,canela:1,pimienta:2,naranja:2,jengibre:1,regaliz:1}},
 {n:"Fuego y humo",d:"Ahumado y tostado.",sty:"autor",bas:"papa",abv:47,dose:{enebro:3,coriandro:1,pimenton:2,roble:2,jalapeno:1,cacao:1}},
 {n:"Inspirado en Rose Cucumber Almond",d:"Dosis ilustrativas.",sty:"autor",bas:"cereal",abv:40,dose:{enebro:3,coriandro:2,angelica:1,tilo:1,limon:1,lavanda:1,rosa:2,pepino:2,almendra:3}},
+{n:"Inspirado en Play",d:"Dosis ilustrativas.",sty:"autor",bas:"cereal",abv:40,dose:{enebro:3,coriandro:2,angelica:1,regaliz:1,melon:2,frutilla:2,mandarina:2,lima:1,menta:2,jengibre:1,vainilla:1}},
 {n:"Inspirado en Orange",d:"Dosis ilustrativas.",sty:"london",bas:"cereal",abv:40,dose:{enebro:3,coriandro:2,angelica:1,regaliz:1,naranja:3,albahaca:2}},
 {n:"Inspirado en Superstar",d:"Dosis ilustrativas.",sty:"london",bas:"cereal",abv:43,dose:{enebro:3,coriandro:2,angelica:1,regaliz:1,limon:2,lavanda:1,pepino:2}},
 {n:"Inspirado en Bloody",d:"Dosis ilustrativas.",sty:"autor",bas:"papa",abv:43,dose:{enebro:3,coriandro:2,tomate:2,plantatomate:2,apio:2,jalapeno:1,alcaparra:1}}];
@@ -173,7 +175,8 @@ var ACR=[
 ["Mary Tudor",["tomate","plantatomate","apio","jalapeno","alcaparra"],5,"Es la receta aromática de nuestra Edición Bloody."],
 ["Rosa, pepino y almendra",["rosa","pepino","almendra"],3,"Floral, fresco y dulce: es el corazón aromático de nuestra Edición Rose Cucumber Almond."],
 ["Lavanda, limón y pepino",["lavanda","limon","pepino"],3,"Floral, cítrico y fresco: es el corazón aromático de nuestra Edición Superstar."],
-["Naranja y albahaca",["naranja","albahaca"],2,"Cítrico jugoso y verde anisado: es la pareja protagonista de nuestra Edición Orange."]];
+["Naranja y albahaca",["naranja","albahaca"],2,"Cítrico jugoso y verde anisado: es la pareja protagonista de nuestra Edición Orange."],
+["Melón, frutilla y menta",["melon","frutilla","menta"],3,"Fruta acuosa, fruta roja y frescor helado: es el corazón aromático de nuestra Edición Play."]];
 function fc(A,f){return A.ids.filter(function(i){return B[i].f==f}).length}
 var MS=[
 ["clasico","Clásico perfecto","Armá un London Dry con armonía de 80 o más.",function(A){return L.sty=="london"&&A.score>=80}],
