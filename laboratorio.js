@@ -149,6 +149,7 @@ var PRE=[
 {n:"Especias de invierno",d:"Cálido y abrigado.",sty:"oldtom",bas:"malta",abv:43,dose:{enebro:3,cardamomo:2,canela:1,pimienta:2,naranja:2,jengibre:1,regaliz:1}},
 {n:"Fuego y humo",d:"Ahumado y tostado.",sty:"autor",bas:"papa",abv:47,dose:{enebro:3,coriandro:1,pimenton:2,roble:2,jalapeno:1,cacao:1}},
 {n:"Inspirado en Rose Cucumber Almond",d:"Dosis ilustrativas.",sty:"autor",bas:"cereal",abv:40,dose:{enebro:3,coriandro:2,angelica:1,tilo:1,limon:1,lavanda:1,rosa:2,pepino:2,almendra:3}},
+{n:"Inspirado en Hop",d:"Dosis ilustrativas.",sty:"autor",bas:"cereal",abv:40,dose:{enebro:3,coriandro:1,angelica:1,regaliz:1,lupulo:3,pomelo:2,limon:1,naranja:1}},
 {n:"Inspirado en Coke",d:"Dosis ilustrativas.",sty:"autor",bas:"cereal",abv:40,dose:{enebro:3,coriandro:2,cilantro:1,angelica:1,regaliz:1,naranja:2,limon:1,lima:1,anisestrellado:1,canela:1,vainilla:1,nuezcola:1}},
 {n:"Inspirado en Play",d:"Dosis ilustrativas.",sty:"autor",bas:"cereal",abv:40,dose:{enebro:3,coriandro:2,angelica:1,regaliz:1,melon:2,frutilla:2,mandarina:2,lima:1,menta:2,jengibre:1,vainilla:1}},
 {n:"Inspirado en Orange",d:"Dosis ilustrativas.",sty:"london",bas:"cereal",abv:40,dose:{enebro:3,coriandro:2,angelica:1,regaliz:1,naranja:3,albahaca:2}},
@@ -179,7 +180,8 @@ var ACR=[
 ["Lavanda, limón y pepino",["lavanda","limon","pepino"],3,"Floral, cítrico y fresco: es el corazón aromático de nuestra Edición Superstar."],
 ["Naranja y albahaca",["naranja","albahaca"],2,"Cítrico jugoso y verde anisado: es la pareja protagonista de nuestra Edición Orange."],
 ["Melón, frutilla y menta",["melon","frutilla","menta"],3,"Fruta acuosa, fruta roja y frescor helado: es el corazón aromático de nuestra Edición Play."],
-["Canela, anís y vainilla",["canela","anisestrellado","vainilla"],3,"Especias dulces de postre: son el corazón aromático de nuestra Edición Coke."]];
+["Canela, anís y vainilla",["canela","anisestrellado","vainilla"],3,"Especias dulces de postre: son el corazón aromático de nuestra Edición Coke."],
+["Lúpulo y pomelo",["lupulo","pomelo"],2,"Resina verde y cítrico jugoso: es el corazón aromático de nuestra Edición Hop."]];
 function fc(A,f){return A.ids.filter(function(i){return B[i].f==f}).length}
 var MS=[
 ["clasico","Clásico perfecto","Armá un London Dry con armonía de 80 o más.",function(A){return L.sty=="london"&&A.score>=80}],
