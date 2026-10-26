@@ -15,7 +15,8 @@ window.WARHOLA_INDICE=[
  {id:"superstar"},
  {id:"orange"},
  {id:"play"},
- {id:"coke"}
+ {id:"coke"},
+ {id:"hop"}
 ];
 window.WARHOLA_GLOSARIO={
  "umami": {
