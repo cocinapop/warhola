@@ -15,7 +15,8 @@ window.WARHOLA_EDICIONES["bloody"]={
   "ingredients": "ingredients.jpg",
   "label": "label.jpg",
   "history": "history.jpg",
-  "promo": "promo.jpg"
+  "promo": "promo.jpg",
+  "extra": "extra.jpg"
  },
  "ritual": [
   [
@@ -451,5 +452,10 @@ window.WARHOLA_EDICIONES["bloody"]={
    "--bgimg": "radial-gradient(ellipse at 50% -8%,rgba(179,38,30,.16),transparent 58%),url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Ccircle cx='15' cy='15' r='1.3' fill='rgba(122,90,34,0.12)'/%3E%3C/svg%3E\")",
    "--bgsz": "auto,30px 30px"
   }
- }
+ },
+ "galeria": [
+  "gal1.jpg",
+  "gal2.jpg",
+  "gal3.jpg"
+ ]
 };

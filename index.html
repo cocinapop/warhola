@@ -196,7 +196,7 @@ function fdate(t){try{return new Date(t).toLocaleDateString("es-AR",{day:"numeri
 function ffound(f){var u=[];f.n.concat(f.b,f.rn||[],[].concat.apply([],f.P)).forEach(function(i){if(u.indexOf(i)<0)u.push(i)});return u}
 function save(){var a=libGet(),old=a.filter(function(x){return x.id==S.fid})[0],f={id:S.fid||(E.id+"-"+Date.now()),ed:E.id,nm:E.sub,t:old?old.t:Date.now(),u:Date.now(),al:S.alias||"",n:S.n.slice(),b:S.b.slice(),gu:S.gu.slice(),rn:S.rn.slice(),per:S.per,dsc:S.dsc,tg:S.tg.slice(),P:S.P.map(function(p){return p.slice()}),coll:coll(),rd:S.rd.slice(),gar:S.gar,rat:S.rat,dsh:S.dsh,xp:xp(),lv:lvl(),nt:old?old.nt:"",rev:old?(old.rev||0)+1:0};a=a.filter(function(x){return x.id!=f.id});a.unshift(f);S.fid=f.id;toast(libSet(a)?(old?"Ficha actualizada":"Guardada en tu biblioteca"):"No se pudo guardar en este dispositivo")}
 function recata(f){if(f.ed!=E.id){location.href=location.pathname+"?edition="+encodeURIComponent(f.ed);return}S.n=f.n.slice();S.b=f.b.slice();S.gu=(f.gu||[0,0,0,0,0,0,0,0]).slice();S.rn=(f.rn||[]).slice();S.per=f.per==null?null:f.per;S.dsc=f.dsc||"";S.tg=(f.tg||[-1,-1,-1,-1]).slice();S.p2=0;S.P=f.P.map(function(p){return p.slice()});if(S.P.length==3&&TIERS.length==4)S.P=[S.P[0],S.P[1],[],S.P[2]];while(S.P.length<TIERS.length)S.P.push([]);S.rd=f.rd.slice();S.gar=f.gar;S.rat=f.rat;S.dsh=f.dsh;S.coll=f.coll.slice();S.alias=f.al;S.fid=f.id;S.lib=0;S.home=0;S.lview=null;S.ton=false;S.tier=0;S.vis=TIERS.map(function(){return 0});S.a=0;S.max=7;S.sealOn=0;render();sc()}
-var VER="v24";
+var VER="v25";
 var TI=window.WARHOLA_TIENDA||{productos:{},orden:[]};
 function money(n){return "$"+Number(n).toLocaleString("es-AR")}
 function cartLoad(){try{return JSON.parse(localStorage.getItem("warhola.cart")||"{}")||{}}catch(e){return{}}}

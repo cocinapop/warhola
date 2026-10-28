@@ -29,7 +29,7 @@ window.WARHOLA_TIENDA={
  supabase:{url:"https://ruxwzrjqqzrvscicrvao.supabase.co",anonKey:"sb_publishable_uvrtD_CuNjkSEY6cw2Y8YQ_Oo9Ii5Y1"},
  aviso:"Beber con moderación. Prohibida su venta a menores de 18 años.",
  envios:"Coordinamos el envío y la forma de pago por mensaje.",
- orden:["rose-cucumber-almond","play","orange","coke","bloody","superstar","hop"],
+ orden:["rose-cucumber-almond","play","orange","coke","bloody","superstar","hop","pure-soap"],
  productos:{
   "rose-cucumber-almond":{precio:75000,formato:"1125 ml",disponible:true},
   "play":{precio:75000,formato:"900 ml · cantimplora",disponible:true},
@@ -37,6 +37,7 @@ window.WARHOLA_TIENDA={
   "coke":{precio:48000,formato:"750 ml",disponible:true},
   "bloody":{precio:53000,disponible:true},
   "superstar":{precio:40000,formato:"500 ml",disponible:true},
-  "hop":{precio:48000,formato:"750 ml",stock:6,disponible:true}
+  "hop":{precio:48000,formato:"750 ml",stock:6,disponible:true},
+  "pure-soap":{formato:"Dispenser 600 ml · Refill 500 ml",disponible:true}
  }
 };

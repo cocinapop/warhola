@@ -36,7 +36,8 @@ insert into public.tienda_productos (id, precio, formato, disponible) values
   ('coke', 48000, '750 ml', true),
   ('bloody', 53000, null, true),
   ('superstar', 40000, '500 ml', true),
-  ('hop', 48000, '750 ml', true)
+  ('hop', 48000, '750 ml', true),
+  ('pure-soap', null, 'Dispenser 600 ml · Refill 500 ml', true)
 on conflict (id) do nothing;
 
 -- ============================================================
