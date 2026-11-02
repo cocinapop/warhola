@@ -25,8 +25,8 @@ create policy "lectura publica" on public.tienda_productos
 drop policy if exists "escritura admin" on public.tienda_productos;
 create policy "escritura admin" on public.tienda_productos
   for all to authenticated
-  using ((auth.jwt() ->> 'email') = 'TU_EMAIL@ejemplo.com')
-  with check ((auth.jwt() ->> 'email') = 'TU_EMAIL@ejemplo.com');
+  using (lower(auth.jwt() ->> 'email') = lower('TU_EMAIL@ejemplo.com'))
+  with check (lower(auth.jwt() ->> 'email') = lower('TU_EMAIL@ejemplo.com'));
 
 -- Datos iniciales (si ya existen, no se pisan)
 insert into public.tienda_productos (id, precio, formato, disponible) values
@@ -37,7 +37,8 @@ insert into public.tienda_productos (id, precio, formato, disponible) values
   ('bloody', 53000, null, true),
   ('superstar', 40000, '500 ml', true),
   ('hop', 48000, '750 ml', true),
-  ('pure-soap', null, 'Dispenser 600 ml · Refill 500 ml', true)
+  ('pure-soap', null, 'Dispenser 600 ml · Refill 500 ml', true),
+  ('velvet', 40000, '710 ml', true)
 on conflict (id) do nothing;
 
 -- ============================================================
@@ -63,4 +64,15 @@ create policy "anotar visita" on public.tienda_visitas
 drop policy if exists "leer visitas admin" on public.tienda_visitas;
 create policy "leer visitas admin" on public.tienda_visitas
   for select to authenticated
-  using ((auth.jwt() ->> 'email') = 'TU_EMAIL@ejemplo.com');
+  using (lower(auth.jwt() ->> 'email') = lower('TU_EMAIL@ejemplo.com'));
+
+-- Avisa a Supabase que recargue la estructura (por si recién agregaste una columna)
+notify pgrst, 'reload schema';
+
+-- ============================================================
+-- DIAGNÓSTICO (opcional): para ver con qué email quedaron los permisos,
+-- corré esta consulta aparte y mirá la columna "regla":
+--   select policyname, coalesce(qual, with_check) as regla
+--   from pg_policies where tablename in ('tienda_productos','tienda_visitas');
+-- El email que aparezca tiene que ser el MISMO con el que entrás al panel.
+-- ============================================================
