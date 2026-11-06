@@ -38,7 +38,8 @@ insert into public.tienda_productos (id, precio, formato, disponible) values
   ('superstar', 40000, '500 ml', true),
   ('hop', 48000, '750 ml', true),
   ('pure-soap', null, 'Dispenser 600 ml · Refill 500 ml', true),
-  ('velvet', 40000, '710 ml', true)
+  ('velvet', 40000, '710 ml', true),
+  ('teddy', null, '600 ml · frasco osito', true)
 on conflict (id) do nothing;
 
 -- ============================================================
