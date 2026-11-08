@@ -131,6 +131,7 @@ window.WARHOLA_EDICIONES["play"]={
  "notas": [
   {
    "id": "n1",
+   "foto": "enebro",
    "m": "n",
    "f": "res",
    "l": "Pino y resina",
@@ -143,6 +144,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "n2",
+   "foto": ["mandarina", "lima"],
    "m": "n",
    "f": "cit",
    "l": "Mandarina y lima",
@@ -154,6 +156,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "n3",
+   "foto": "melon",
    "m": "n",
    "f": "fru",
    "l": "Melón maduro",
@@ -165,6 +168,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "n4",
+   "foto": "frutilla",
    "m": "n",
    "f": "fru",
    "l": "Frutilla",
@@ -176,6 +180,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "n5",
+   "foto": "menta",
    "m": "n",
    "f": "men",
    "l": "Menta fresca y mentolada",
@@ -187,6 +192,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "n6",
+   "foto": "hierbabuena",
    "m": "n",
    "f": "men",
    "l": "Menta verde y dulce",
@@ -198,6 +204,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "n7",
+   "foto": "jengibre",
    "m": "n",
    "f": "esp",
    "l": "Jengibre",
@@ -209,6 +216,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "n8",
+   "foto": "vainilla",
    "m": "n",
    "f": "esp",
    "l": "Vainilla suave",
@@ -220,6 +228,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "n9",
+   "foto": ["angelica", "coriandro"],
    "m": "n",
    "f": "res",
    "l": "Raíz y semilla seca",
@@ -231,6 +240,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "b1",
+   "foto": ["melon", "frutilla"],
    "m": "b",
    "f": "dul",
    "l": "Fruta madura",
@@ -243,6 +253,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "b2",
+   "foto": ["mandarina", "lima"],
    "m": "b",
    "f": "fre",
    "l": "Mandarina y lima jugosas",
@@ -254,6 +265,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "b3",
+   "foto": ["menta", "hierbabuena"],
    "m": "b",
    "f": "fre",
    "l": "Frescor mentolado",
@@ -265,6 +277,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "b4",
+   "foto": "jengibre",
    "m": "b",
    "f": "cue",
    "l": "Cosquilleo de jengibre",
@@ -276,6 +289,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "b5",
+   "foto": "vainilla",
    "m": "b",
    "f": "cue",
    "l": "Vainilla de fondo",
@@ -288,6 +302,7 @@ window.WARHOLA_EDICIONES["play"]={
   },
   {
    "id": "b6",
+   "foto": "regaliz",
    "m": "b",
    "f": "dul",
    "l": "Dulzor de regaliz",

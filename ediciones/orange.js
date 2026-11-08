@@ -117,6 +117,7 @@ window.WARHOLA_EDICIONES["orange"]={
  "notas": [
   {
    "id": "n1",
+   "foto": "enebro",
    "m": "n",
    "f": "res",
    "l": "Pino y resina",
@@ -129,6 +130,7 @@ window.WARHOLA_EDICIONES["orange"]={
   },
   {
    "id": "n2",
+   "foto": "naranja",
    "m": "n",
    "f": "cit",
    "l": "Naranja recién exprimida",
@@ -140,6 +142,7 @@ window.WARHOLA_EDICIONES["orange"]={
   },
   {
    "id": "n3",
+   "foto": "naranja",
    "m": "n",
    "f": "cit",
    "l": "Aceite de cáscara",
@@ -151,6 +154,7 @@ window.WARHOLA_EDICIONES["orange"]={
   },
   {
    "id": "n4",
+   "foto": "albahaca",
    "m": "n",
    "f": "her",
    "l": "Albahaca fresca",
@@ -162,6 +166,7 @@ window.WARHOLA_EDICIONES["orange"]={
   },
   {
    "id": "n5",
+   "foto": "albahaca",
    "m": "n",
    "f": "her",
    "l": "Toque de anís",
@@ -173,6 +178,7 @@ window.WARHOLA_EDICIONES["orange"]={
   },
   {
    "id": "n6",
+   "foto": "coriandro",
    "m": "n",
    "f": "res",
    "l": "Cáscara seca",
@@ -184,6 +190,7 @@ window.WARHOLA_EDICIONES["orange"]={
   },
   {
    "id": "n7",
+   "foto": "angelica",
    "m": "n",
    "f": "res",
    "l": "Raíz y tierra suave",
@@ -195,6 +202,7 @@ window.WARHOLA_EDICIONES["orange"]={
   },
   {
    "id": "b1",
+   "foto": "naranja",
    "m": "b",
    "f": "fre",
    "l": "Naranja intensa",
@@ -206,6 +214,7 @@ window.WARHOLA_EDICIONES["orange"]={
   },
   {
    "id": "b2",
+   "foto": "albahaca",
    "m": "b",
    "f": "fre",
    "l": "Frescor herbal",
@@ -217,6 +226,7 @@ window.WARHOLA_EDICIONES["orange"]={
   },
   {
    "id": "b3",
+   "foto": "regaliz",
    "m": "b",
    "f": "dul",
    "l": "Dulzor de regaliz",
@@ -229,6 +239,7 @@ window.WARHOLA_EDICIONES["orange"]={
   },
   {
    "id": "b4",
+   "foto": "naranja",
    "m": "b",
    "f": "cue",
    "l": "Amargor de cáscara",
@@ -241,6 +252,7 @@ window.WARHOLA_EDICIONES["orange"]={
   },
   {
    "id": "b5",
+   "foto": ["angelica", "enebro"],
    "m": "b",
    "f": "cue",
    "l": "Raíz y enebro al final",

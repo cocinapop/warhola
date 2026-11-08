@@ -129,6 +129,7 @@ window.WARHOLA_EDICIONES["velvet"]={
  "notas": [
   {
    "id": "n1",
+   "foto": "naranja",
    "m": "n",
    "f": "cit",
    "l": "Naranja",
@@ -140,6 +141,7 @@ window.WARHOLA_EDICIONES["velvet"]={
   },
   {
    "id": "n2",
+   "foto": "pomelo",
    "m": "n",
    "f": "cit",
    "l": "Pomelo",
@@ -151,6 +153,7 @@ window.WARHOLA_EDICIONES["velvet"]={
   },
   {
    "id": "n3",
+   "foto": "limon",
    "m": "n",
    "f": "cit",
    "l": "Limón",
@@ -162,6 +165,7 @@ window.WARHOLA_EDICIONES["velvet"]={
   },
   {
    "id": "n4",
+   "foto": "canela",
    "m": "n",
    "f": "esp",
    "l": "Canela",
@@ -173,6 +177,7 @@ window.WARHOLA_EDICIONES["velvet"]={
   },
   {
    "id": "n5",
+   "foto": "anisestrellado",
    "m": "n",
    "f": "esp",
    "l": "Anís estrellado",
@@ -184,6 +189,7 @@ window.WARHOLA_EDICIONES["velvet"]={
   },
   {
    "id": "n6",
+   "foto": "ajenjo",
    "m": "n",
    "f": "her",
    "l": "Ajenjo",
@@ -196,6 +202,7 @@ window.WARHOLA_EDICIONES["velvet"]={
   },
   {
    "id": "n7",
+   "foto": "almibar",
    "m": "n",
    "f": "dul",
    "l": "Caramelo claro",
@@ -208,6 +215,7 @@ window.WARHOLA_EDICIONES["velvet"]={
   },
   {
    "id": "b1",
+   "foto": ["ajenjo", "pomelo"],
    "m": "b",
    "f": "amg",
    "l": "Amargor elegante",
@@ -220,6 +228,7 @@ window.WARHOLA_EDICIONES["velvet"]={
   },
   {
    "id": "b2",
+   "foto": "almibar",
    "m": "b",
    "f": "dub",
    "l": "Dulzor de almíbar",
@@ -232,6 +241,7 @@ window.WARHOLA_EDICIONES["velvet"]={
   },
   {
    "id": "b3",
+   "foto": ["naranja", "pomelo", "limon"],
    "m": "b",
    "f": "dub",
    "l": "Cítricos jugosos",
@@ -243,6 +253,7 @@ window.WARHOLA_EDICIONES["velvet"]={
   },
   {
    "id": "b4",
+   "foto": ["canela", "anisestrellado"],
    "m": "b",
    "f": "cue",
    "l": "Especias cálidas",
@@ -254,6 +265,7 @@ window.WARHOLA_EDICIONES["velvet"]={
   },
   {
    "id": "b5",
+   "foto": "ajenjo",
    "m": "b",
    "f": "cue",
    "l": "Final amargo y largo",

@@ -143,6 +143,7 @@ window.WARHOLA_EDICIONES["teddy"]={
  "notas": [
   {
    "id": "n1",
+   "foto": "banana",
    "m": "n",
    "f": "ban",
    "l": "Banana madura",
@@ -154,6 +155,7 @@ window.WARHOLA_EDICIONES["teddy"]={
   },
   {
    "id": "n2",
+   "foto": "vainilla",
    "m": "n",
    "f": "ban",
    "l": "Vainilla",
@@ -165,6 +167,7 @@ window.WARHOLA_EDICIONES["teddy"]={
   },
   {
    "id": "n3",
+   "foto": "cacao",
    "m": "n",
    "f": "tos",
    "l": "Cacao",
@@ -176,6 +179,7 @@ window.WARHOLA_EDICIONES["teddy"]={
   },
   {
    "id": "n4",
+   "foto": "cafe",
    "m": "n",
    "f": "tos",
    "l": "Café",
@@ -187,6 +191,7 @@ window.WARHOLA_EDICIONES["teddy"]={
   },
   {
    "id": "n5",
+   "foto": "miel",
    "m": "n",
    "f": "mie",
    "l": "Miel",
@@ -199,6 +204,7 @@ window.WARHOLA_EDICIONES["teddy"]={
   },
   {
    "id": "n6",
+   "foto": "caramelo",
    "m": "n",
    "f": "mie",
    "l": "Caramelo",
@@ -210,6 +216,7 @@ window.WARHOLA_EDICIONES["teddy"]={
   },
   {
    "id": "n7",
+   "foto": "roble",
    "m": "n",
    "f": "bar",
    "l": "Roble y barrica",
@@ -221,6 +228,7 @@ window.WARHOLA_EDICIONES["teddy"]={
   },
   {
    "id": "n8",
+   "foto": "enebro",
    "m": "n",
    "f": "bar",
    "l": "Pino suave",
@@ -233,6 +241,7 @@ window.WARHOLA_EDICIONES["teddy"]={
   },
   {
    "id": "b1",
+   "foto": "leche",
    "m": "b",
    "f": "cre",
    "l": "Cremosidad",
@@ -245,6 +254,7 @@ window.WARHOLA_EDICIONES["teddy"]={
   },
   {
    "id": "b2",
+   "foto": ["caramelo", "miel"],
    "m": "b",
    "f": "dul",
    "l": "Caramelo y miel",
@@ -257,6 +267,7 @@ window.WARHOLA_EDICIONES["teddy"]={
   },
   {
    "id": "b3",
+   "foto": ["banana", "vainilla"],
    "m": "b",
    "f": "cre",
    "l": "Banana y vainilla",
@@ -268,6 +279,7 @@ window.WARHOLA_EDICIONES["teddy"]={
   },
   {
    "id": "b4",
+   "foto": ["cacao", "cafe"],
    "m": "b",
    "f": "cue",
    "l": "Cacao y café",
@@ -279,6 +291,7 @@ window.WARHOLA_EDICIONES["teddy"]={
   },
   {
    "id": "b5",
+   "foto": "roble",
    "m": "b",
    "f": "cue",
    "l": "Roble y final cálido",

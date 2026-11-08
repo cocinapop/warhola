@@ -79,6 +79,7 @@ window.WARHOLA_EDICIONES["bloody"]={
  "notas": [
   {
    "id": "n1",
+   "foto": "enebro",
    "m": "n",
    "f": "res",
    "l": "Pino y resina",
@@ -90,6 +91,7 @@ window.WARHOLA_EDICIONES["bloody"]={
   },
   {
    "id": "n2",
+   "foto": "coriandro",
    "m": "n",
    "f": "res",
    "l": "Cáscara seca",
@@ -101,6 +103,7 @@ window.WARHOLA_EDICIONES["bloody"]={
   },
   {
    "id": "n3",
+   "foto": "plantatomate",
    "m": "n",
    "f": "ver",
    "l": "Hoja frotada",
@@ -112,6 +115,7 @@ window.WARHOLA_EDICIONES["bloody"]={
   },
   {
    "id": "n4",
+   "foto": "apio",
    "m": "n",
    "f": "ver",
    "l": "Tallo crujiente",
@@ -123,6 +127,7 @@ window.WARHOLA_EDICIONES["bloody"]={
   },
   {
    "id": "n5",
+   "foto": "tomate",
    "m": "n",
    "f": "ver",
    "l": "Tomate maduro",
@@ -134,6 +139,7 @@ window.WARHOLA_EDICIONES["bloody"]={
   },
   {
    "id": "n6",
+   "foto": "papa",
    "m": "n",
    "f": "flo",
    "l": "Pétalos suaves",
@@ -145,6 +151,7 @@ window.WARHOLA_EDICIONES["bloody"]={
   },
   {
    "id": "n7",
+   "foto": "pimienta",
    "m": "n",
    "f": "flo",
    "l": "Pimienta tibia",
@@ -156,6 +163,7 @@ window.WARHOLA_EDICIONES["bloody"]={
   },
   {
    "id": "b1",
+   "foto": "salsainglesa",
    "m": "b",
    "f": "sal",
    "l": "Saliva que aparece",
@@ -168,6 +176,7 @@ window.WARHOLA_EDICIONES["bloody"]={
   },
   {
    "id": "b2",
+   "foto": "alcaparra",
    "m": "b",
    "f": "sal",
    "l": "Sal concentrada",
@@ -180,6 +189,7 @@ window.WARHOLA_EDICIONES["bloody"]={
   },
   {
    "id": "b3",
+   "foto": "jalapeno",
    "m": "b",
    "f": "cal",
    "l": "Calor tibio",
@@ -192,6 +202,7 @@ window.WARHOLA_EDICIONES["bloody"]={
   },
   {
    "id": "b4",
+   "foto": "tomateseco",
    "m": "b",
    "f": "cal",
    "l": "Dulzor oscuro",
@@ -203,6 +214,7 @@ window.WARHOLA_EDICIONES["bloody"]={
   },
   {
    "id": "b5",
+   "foto": "papa",
    "m": "b",
    "f": "cue",
    "l": "Seda en boca",

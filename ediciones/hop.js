@@ -127,6 +127,7 @@ window.WARHOLA_EDICIONES["hop"]={
  "notas": [
   {
    "id": "n1",
+   "foto": "enebro",
    "m": "n",
    "f": "res",
    "l": "Pino y resina",
@@ -139,6 +140,7 @@ window.WARHOLA_EDICIONES["hop"]={
   },
   {
    "id": "n2",
+   "foto": "lupulo",
    "m": "n",
    "f": "lup",
    "l": "Cono de lúpulo",
@@ -151,6 +153,7 @@ window.WARHOLA_EDICIONES["hop"]={
   },
   {
    "id": "n3",
+   "foto": "pomelo",
    "m": "n",
    "f": "cit",
    "l": "Pomelo",
@@ -162,6 +165,7 @@ window.WARHOLA_EDICIONES["hop"]={
   },
   {
    "id": "n4",
+   "foto": "naranja",
    "m": "n",
    "f": "cit",
    "l": "Cáscara de naranja",
@@ -173,6 +177,7 @@ window.WARHOLA_EDICIONES["hop"]={
   },
   {
    "id": "n5",
+   "foto": "limon",
    "m": "n",
    "f": "cit",
    "l": "Limón",
@@ -184,6 +189,7 @@ window.WARHOLA_EDICIONES["hop"]={
   },
   {
    "id": "n6",
+   "foto": "lupulo",
    "m": "n",
    "f": "flo",
    "l": "Flor de lúpulo",
@@ -195,6 +201,7 @@ window.WARHOLA_EDICIONES["hop"]={
   },
   {
    "id": "n7",
+   "foto": "lupulo",
    "m": "n",
    "f": "lup",
    "l": "Hierba fresca",
@@ -206,6 +213,7 @@ window.WARHOLA_EDICIONES["hop"]={
   },
   {
    "id": "n8",
+   "foto": ["coriandro", "angelica"],
    "m": "n",
    "f": "res",
    "l": "Cáscara seca y raíz",
@@ -217,6 +225,7 @@ window.WARHOLA_EDICIONES["hop"]={
   },
   {
    "id": "b1",
+   "foto": ["pomelo", "lupulo"],
    "m": "b",
    "f": "cue",
    "l": "Amargor fino",
@@ -229,6 +238,7 @@ window.WARHOLA_EDICIONES["hop"]={
   },
   {
    "id": "b2",
+   "foto": ["lupulo", "enebro"],
    "m": "b",
    "f": "fre",
    "l": "Resina fresca",
@@ -240,6 +250,7 @@ window.WARHOLA_EDICIONES["hop"]={
   },
   {
    "id": "b3",
+   "foto": ["limon", "pomelo", "naranja"],
    "m": "b",
    "f": "fre",
    "l": "Chispa cítrica",
@@ -251,6 +262,7 @@ window.WARHOLA_EDICIONES["hop"]={
   },
   {
    "id": "b4",
+   "foto": ["regaliz", "naranja"],
    "m": "b",
    "f": "dul",
    "l": "Dulzor suave",
@@ -263,6 +275,7 @@ window.WARHOLA_EDICIONES["hop"]={
   },
   {
    "id": "b5",
+   "foto": ["enebro", "angelica", "lupulo"],
    "m": "b",
    "f": "cue",
    "l": "Final seco y resinoso",

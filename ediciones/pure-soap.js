@@ -132,6 +132,7 @@ window.WARHOLA_EDICIONES["pure-soap"]={
  "notas": [
   {
    "id": "n1",
+   "foto": "enebro",
    "m": "n",
    "f": "res",
    "l": "Pino y resina",
@@ -144,6 +145,7 @@ window.WARHOLA_EDICIONES["pure-soap"]={
   },
   {
    "id": "n2",
+   "foto": "lima",
    "m": "n",
    "f": "cit",
    "l": "Lima fresca",
@@ -155,6 +157,7 @@ window.WARHOLA_EDICIONES["pure-soap"]={
   },
   {
    "id": "n3",
+   "foto": "coco",
    "m": "n",
    "f": "coc",
    "l": "Coco rallado",
@@ -166,6 +169,7 @@ window.WARHOLA_EDICIONES["pure-soap"]={
   },
   {
    "id": "n4",
+   "foto": "vainilla",
    "m": "n",
    "f": "coc",
    "l": "Vainilla",
@@ -177,6 +181,7 @@ window.WARHOLA_EDICIONES["pure-soap"]={
   },
   {
    "id": "n5",
+   "foto": "jengibre",
    "m": "n",
    "f": "esp",
    "l": "Jengibre",
@@ -188,6 +193,7 @@ window.WARHOLA_EDICIONES["pure-soap"]={
   },
   {
    "id": "n6",
+   "foto": "azahar",
    "m": "n",
    "f": "flo",
    "l": "Flor de naranjo",
@@ -200,6 +206,7 @@ window.WARHOLA_EDICIONES["pure-soap"]={
   },
   {
    "id": "n7",
+   "foto": ["coco", "lima", "azahar"],
    "m": "n",
    "f": "flo",
    "l": "Piel limpia",
@@ -211,6 +218,7 @@ window.WARHOLA_EDICIONES["pure-soap"]={
   },
   {
    "id": "n8",
+   "foto": ["coriandro", "angelica"],
    "m": "n",
    "f": "res",
    "l": "Cáscara seca y raíz",
@@ -222,6 +230,7 @@ window.WARHOLA_EDICIONES["pure-soap"]={
   },
   {
    "id": "b1",
+   "foto": "coco",
    "m": "b",
    "f": "cre",
    "l": "Cremosidad de coco",
@@ -234,6 +243,7 @@ window.WARHOLA_EDICIONES["pure-soap"]={
   },
   {
    "id": "b2",
+   "foto": "lima",
    "m": "b",
    "f": "fre",
    "l": "Lima limpia",
@@ -245,6 +255,7 @@ window.WARHOLA_EDICIONES["pure-soap"]={
   },
   {
    "id": "b3",
+   "foto": "vainilla",
    "m": "b",
    "f": "cre",
    "l": "Vainilla suave",
@@ -257,6 +268,7 @@ window.WARHOLA_EDICIONES["pure-soap"]={
   },
   {
    "id": "b4",
+   "foto": "jengibre",
    "m": "b",
    "f": "cue",
    "l": "Calor de jengibre",
@@ -268,6 +280,7 @@ window.WARHOLA_EDICIONES["pure-soap"]={
   },
   {
    "id": "b5",
+   "foto": ["azahar", "enebro", "angelica"],
    "m": "b",
    "f": "cue",
    "l": "Final floral y limpio",

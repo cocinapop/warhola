@@ -119,6 +119,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
  "notas": [
   {
    "id": "n1",
+   "foto": "enebro",
    "m": "n",
    "f": "res",
    "l": "Pino y resina",
@@ -131,6 +132,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
   },
   {
    "id": "n2",
+   "foto": "coriandro",
    "m": "n",
    "f": "res",
    "l": "Cáscara seca",
@@ -142,6 +144,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
   },
   {
    "id": "n3",
+   "foto": "angelica",
    "m": "n",
    "f": "res",
    "l": "Raíz y tierra suave",
@@ -153,6 +156,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
   },
   {
    "id": "n4",
+   "foto": "rosa",
    "m": "n",
    "f": "flo",
    "l": "Pétalos de rosa",
@@ -164,6 +168,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
   },
   {
    "id": "n5",
+   "foto": "tilo",
    "m": "n",
    "f": "flo",
    "l": "Miel de tilo",
@@ -175,6 +180,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
   },
   {
    "id": "n6",
+   "foto": "lavanda",
    "m": "n",
    "f": "flo",
    "l": "Lavanda",
@@ -186,6 +192,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
   },
   {
    "id": "n7",
+   "foto": "pepino",
    "m": "n",
    "f": "ver",
    "l": "Pepino fresco",
@@ -208,6 +215,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
   },
   {
    "id": "b1",
+   "foto": "almendra",
    "m": "b",
    "f": "dul",
    "l": "Almendra dulce",
@@ -220,6 +228,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
   },
   {
    "id": "b2",
+   "foto": "rosa",
    "m": "b",
    "f": "dul",
    "l": "Dulzor floral",
@@ -231,6 +240,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
   },
   {
    "id": "b3",
+   "foto": "pepino",
    "m": "b",
    "f": "fre",
    "l": "Frescura de pepino",
@@ -242,6 +252,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
   },
   {
    "id": "b4",
+   "foto": ["almendra", "angelica"],
    "m": "b",
    "f": "cue",
    "l": "Seda cremosa",
@@ -254,6 +265,7 @@ window.WARHOLA_EDICIONES["rose-cucumber-almond"]={
   },
   {
    "id": "b5",
+   "foto": "tilo",
    "m": "b",
    "f": "cue",
    "l": "Retrogusto de tilo",

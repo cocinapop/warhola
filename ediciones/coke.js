@@ -126,6 +126,7 @@ window.WARHOLA_EDICIONES["coke"]={
  "notas": [
   {
    "id": "n1",
+   "foto": "enebro",
    "m": "n",
    "f": "res",
    "l": "Pino y resina",
@@ -138,6 +139,7 @@ window.WARHOLA_EDICIONES["coke"]={
   },
   {
    "id": "n2",
+   "foto": "naranja",
    "m": "n",
    "f": "cit",
    "l": "Naranja",
@@ -149,6 +151,7 @@ window.WARHOLA_EDICIONES["coke"]={
   },
   {
    "id": "n3",
+   "foto": ["limon", "lima"],
    "m": "n",
    "f": "cit",
    "l": "Limón y lima",
@@ -160,6 +163,7 @@ window.WARHOLA_EDICIONES["coke"]={
   },
   {
    "id": "n4",
+   "foto": "canela",
    "m": "n",
    "f": "esp",
    "l": "Canela",
@@ -171,6 +175,7 @@ window.WARHOLA_EDICIONES["coke"]={
   },
   {
    "id": "n5",
+   "foto": "anisestrellado",
    "m": "n",
    "f": "esp",
    "l": "Anís estrellado",
@@ -182,6 +187,7 @@ window.WARHOLA_EDICIONES["coke"]={
   },
   {
    "id": "n6",
+   "foto": "vainilla",
    "m": "n",
    "f": "esp",
    "l": "Vainilla",
@@ -193,6 +199,7 @@ window.WARHOLA_EDICIONES["coke"]={
   },
   {
    "id": "n7",
+   "foto": ["cilantro", "coriandro"],
    "m": "n",
    "f": "her",
    "l": "Cilantro y coriandro",
@@ -204,6 +211,7 @@ window.WARHOLA_EDICIONES["coke"]={
   },
   {
    "id": "n8",
+   "foto": ["angelica", "regaliz"],
    "m": "n",
    "f": "res",
    "l": "Raíz y tierra suave",
@@ -227,6 +235,7 @@ window.WARHOLA_EDICIONES["coke"]={
   },
   {
    "id": "b2",
+   "foto": "vainilla",
    "m": "b",
    "f": "dul",
    "l": "Dulzor de vainilla",
@@ -238,6 +247,7 @@ window.WARHOLA_EDICIONES["coke"]={
   },
   {
    "id": "b3",
+   "foto": ["naranja", "limon", "lima"],
    "m": "b",
    "f": "fre",
    "l": "Cítricos de cola",
@@ -249,6 +259,7 @@ window.WARHOLA_EDICIONES["coke"]={
   },
   {
    "id": "b4",
+   "foto": ["canela", "anisestrellado"],
    "m": "b",
    "f": "cue",
    "l": "Especias cálidas",
@@ -260,6 +271,7 @@ window.WARHOLA_EDICIONES["coke"]={
   },
   {
    "id": "b5",
+   "foto": "nuezcola",
    "m": "b",
    "f": "cue",
    "l": "Nuez de cola",
@@ -271,6 +283,7 @@ window.WARHOLA_EDICIONES["coke"]={
   },
   {
    "id": "b6",
+   "foto": ["regaliz", "angelica"],
    "m": "b",
    "f": "cue",
    "l": "Regaliz y raíz al final",

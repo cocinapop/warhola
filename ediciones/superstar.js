@@ -124,6 +124,7 @@ window.WARHOLA_EDICIONES["superstar"]={
  "notas": [
   {
    "id": "n1",
+   "foto": "enebro",
    "m": "n",
    "f": "res",
    "l": "Pino y resina",
@@ -136,6 +137,7 @@ window.WARHOLA_EDICIONES["superstar"]={
   },
   {
    "id": "n2",
+   "foto": "limon",
    "m": "n",
    "f": "cit",
    "l": "Limón recién cortado",
@@ -147,6 +149,7 @@ window.WARHOLA_EDICIONES["superstar"]={
   },
   {
    "id": "n3",
+   "foto": "lavanda",
    "m": "n",
    "f": "flo",
    "l": "Lavanda",
@@ -158,6 +161,7 @@ window.WARHOLA_EDICIONES["superstar"]={
   },
   {
    "id": "n4",
+   "foto": "pepino",
    "m": "n",
    "f": "ver",
    "l": "Pepino fresco",
@@ -169,6 +173,7 @@ window.WARHOLA_EDICIONES["superstar"]={
   },
   {
    "id": "n5",
+   "foto": "coriandro",
    "m": "n",
    "f": "res",
    "l": "Cáscara seca",
@@ -180,6 +185,7 @@ window.WARHOLA_EDICIONES["superstar"]={
   },
   {
    "id": "n6",
+   "foto": "angelica",
    "m": "n",
    "f": "res",
    "l": "Raíz y tierra suave",
@@ -191,6 +197,7 @@ window.WARHOLA_EDICIONES["superstar"]={
   },
   {
    "id": "b1",
+   "foto": "regaliz",
    "m": "b",
    "f": "dul",
    "l": "Dulzor de regaliz",
@@ -203,6 +210,7 @@ window.WARHOLA_EDICIONES["superstar"]={
   },
   {
    "id": "b2",
+   "foto": "pepino",
    "m": "b",
    "f": "fre",
    "l": "Frescura de pepino",
@@ -214,6 +222,7 @@ window.WARHOLA_EDICIONES["superstar"]={
   },
   {
    "id": "b3",
+   "foto": "limon",
    "m": "b",
    "f": "fre",
    "l": "Destello de limón",
@@ -225,6 +234,7 @@ window.WARHOLA_EDICIONES["superstar"]={
   },
   {
    "id": "b4",
+   "foto": ["angelica", "limon"],
    "m": "b",
    "f": "cue",
    "l": "Amargor fino",
@@ -236,6 +246,7 @@ window.WARHOLA_EDICIONES["superstar"]={
   },
   {
    "id": "b5",
+   "foto": ["angelica", "enebro"],
    "m": "b",
    "f": "cue",
    "l": "Raíz y enebro al final",
