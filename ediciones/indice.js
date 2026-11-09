@@ -19,7 +19,8 @@ window.WARHOLA_INDICE=[
  {id:"hop"},
  {id:"pure-soap"},
  {id:"velvet"},
- {id:"teddy"}
+ {id:"teddy"},
+ {id:"_vodka"} /* borrador: el guion bajo la oculta de la portada; se abre con ?edition=_vodka */
 ];
 window.WARHOLA_GLOSARIO={
  "umami": {
