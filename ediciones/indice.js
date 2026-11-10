@@ -20,7 +20,7 @@ window.WARHOLA_INDICE=[
  {id:"pure-soap"},
  {id:"velvet"},
  {id:"teddy"},
- {id:"_vodka"} /* borrador: el guion bajo la oculta de la portada; se abre con ?edition=_vodka */
+ {id:"vodka"}
 ];
 window.WARHOLA_GLOSARIO={
  "umami": {

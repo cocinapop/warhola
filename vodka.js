@@ -49,7 +49,8 @@ function story(){
  return sec("vs-story","Capítulo 1","The Story",
   (h.intro?'<p class="vlead">'+esc(h.intro)+'</p>':pend("introducción breve"))
   +gal("story")
-  +(h.ampliada?'<p>'+esc(h.ampliada)+'</p>':pend("historia ampliada"))
+  +(h.ampliada?[].concat(h.ampliada).map(function(t){return '<p>'+esc(t)+'</p>'}).join(""):pend("historia ampliada"))
+  +(h.personaje?'<p class="mute">'+esc(h.personaje)+'</p>':pend("presentación del personaje"))
   +(h.firma?'<p class="vsign serif">'+esc(h.firma)+'</p>':pend("frase de cierre (firma narrativa)")))
 }
 function vera(){
@@ -67,7 +68,11 @@ function spirit(){
  return sec("vs-spirit","Capítulo 3","The Spirit",
   '<div class="vbot">'+imp(E.imagenes&&E.imagenes.bottle,"vbottle","Botella de Warhola Vodka")+imp(E.imagenes&&E.imagenes.label,"vlabel","Etiqueta de Warhola Vodka")+'</div>'
   +'<div class="card g">'+rows+'</div>'
-  +'<div class="card"><span class="eyebrow">Perfil sensorial</span>'+(p.direccion?'<p style="margin-top:8px">'+esc(p.direccion)+'</p>':pend("dirección sensorial"))+ficha+'</div>')
+  +'<div class="card"><span class="eyebrow">Perfil sensorial</span>'+(p.direccion?'<p style="margin-top:8px">'+esc(p.direccion)+'</p>':pend("dirección sensorial"))+ficha+'</div>'+nace())
+}
+function nace(){
+ var n=D().nace;if(!n||!n.pasos)return "";
+ return '<div class="card"><span class="eyebrow">'+esc(n.titulo||"Cómo nace")+'</span>'+n.pasos.map(function(p,i){return '<div class="vstep"><i>'+(i+1)+'</i><div><b class="serif" style="font-size:calc(19px*var(--fs,1));color:var(--gold)">'+esc(p[0])+'</b><p class="mute" style="margin:0">'+esc(p[1])+'</p></div></div>'}).join("")+(n.nota?'<p class="mute" style="margin:10px 0 0;font-size:calc(12.5px*var(--fs,1))">'+esc(n.nota)+'</p>':"")+'</div>'
 }
 function stepBody(i){
  var p=PASOS[i],d=D(),pf=d.perfil||{},sv=d.servicio||{};
@@ -125,6 +130,7 @@ st.textContent=".vdraft{border:1px dashed var(--gold);color:var(--mute);padding:
 +".vbot{display:flex;gap:10px;align-items:flex-start;margin:0 0 14px}.vbot img{margin:0;border:1px solid var(--gold);min-width:0}.vbottle{flex:0 0 36%;width:36%;object-fit:cover}.vlabel{flex:1;width:60%;object-fit:contain;background:#fff}"
 +".vrow{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--line)}.vrow:last-child{border-bottom:0}.vrow span{color:var(--mute);font-size:calc(13px*var(--fs,1))}.vrow b{font-weight:500;text-align:right}"
 +".vc{border:1px solid var(--gold);color:var(--gold);background:none;border-radius:99px;padding:6px 14px;margin:3px 4px 3px 0;font-size:calc(13.5px*var(--fs,1))}.vc.on{background:var(--gold);color:var(--bg)}"
++".vstep{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}.vstep:last-of-type{border-bottom:0}.vstep i{flex:none;width:26px;height:26px;border:1px solid var(--gold);color:var(--gold);border-radius:50%;font-style:normal;display:flex;align-items:center;justify-content:center;font-size:13px}"
 +".vseg{margin:0 0 12px}.vnav{display:flex;gap:10px}.vnav .btn{margin-top:4px}";
 document.head.appendChild(st);
 window.WARHOLA_VODKA={view:view,nav:nav,act:act};
