@@ -20,6 +20,10 @@ window.WARHOLA_EDICIONES["vodka"]={
   "bottle": "bottle.jpg",
   "label": "label.jpg"
  },
+ "musica": {
+  "titulo": "WARHOLA VODKA · VERA ORLOVA",
+  "spotify": "https://open.spotify.com/playlist/39rKJSf9CTu1PaUjMMpLKS"
+ },
  "tema": {
   "dark": {
    "--bg": "#0b0d16",
