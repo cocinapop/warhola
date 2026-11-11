@@ -50,13 +50,14 @@ function dos(){
 }
 function notas(){
  var d=D(),E=EE(),p=d.perfil||{};
+ var ficha=["vista","nariz","boca","final"].filter(function(k){return p[k]}).map(function(k){return '<div class="vrow"><span>'+NOM[k]+'</span><b>'+esc(p[k])+'</b></div>'}).join("");
  var rows=(d.datos||[]).filter(function(r){return r[1]}).map(function(r){return '<div class="vrow"><span>'+esc(r[0])+'</span><b>'+esc(r[1])+'</b></div>'}).join("");
  var cards=(d.notas||[]).map(function(n,i){return '<div class="vstep"><i>'+(i+1)+'</i><div><b class="serif" style="font-size:calc(19px*var(--fs,1));color:var(--gold)">'+esc(n[0])+'</b><p class="mute" style="margin:0">'+esc(n[1])+'</p></div></div>'}).join("");
  return sec("ls-notas","Capítulo 3","Three Notes",
-  (d.ingredientes?'<div class="vbot">'+im(d.ingredientes,"vlabel","Almendras, naranja y nibs de cacao junto a Warhola Swan")+imp(E.imagenes&&E.imagenes.bottle,"vbottle","Botella de Warhola Swan")+'</div>':"")
+  gal("producto")+(d.ingredientes?'<div class="vbot">'+im(d.ingredientes,"vlabel","Almendras, naranja y nibs de cacao junto a Warhola Swan")+imp(E.imagenes&&E.imagenes.bottle,"vbottle","Botella de Warhola Swan")+'</div>':"")
   +'<div class="card">'+cards+'</div>'
   +'<div class="card g">'+rows+'</div>'
-  +(p.direccion?'<div class="card"><span class="eyebrow">Perfil sensorial</span><p style="margin-top:8px">'+esc(p.direccion)+'</p></div>':""))
+  +((p.direccion||ficha)?'<div class="card"><span class="eyebrow">Perfil sensorial</span>'+(p.direccion?'<p style="margin-top:8px">'+esc(p.direccion)+'</p>':"")+ficha+'</div>':""))
 }
 function stepBody(i){
  var p=PASOS[i],d=D(),s=d.servicio||{},pf=d.perfil||{};
@@ -69,7 +70,7 @@ function stepBody(i){
   if(p.k=="copa"){h+=(s.copa?'<div class="vrow"><span>Copa</span><b>'+esc(s.copa)+'</b></div>':"")+(s.hielo?'<div class="vrow"><span>Hielo</span><b>'+esc(s.hielo)+'</b></div>':"")}
   if(OPC[p.k]){
    h+='<div class="vchips" style="margin-top:12px">'+OPC[p.k].map(function(o,j){var on=V.pick[p.k].indexOf(j)>=0;return '<button class="vc'+(on?" on":"")+'" data-a="licpick" data-k="'+p.k+'" data-v="'+j+'">'+esc(o)+'</button>'}).join("")+'</div>';
-   if(pf[p.k])h+='<p class="mute" style="margin-top:12px"><b>Lo que busca Warhola:</b> '+esc(pf[p.k])+'</p>';
+   if(pf[p.k])h+='<p class="mute" style="margin-top:12px"><b>Cómo lo describe Warhola:</b> '+esc(pf[p.k])+'</p>';
   }
  }
  return h+'</div>';

@@ -204,7 +204,7 @@ function save(){var a=libGet(),old=a.filter(function(x){return x.id==S.fid})[0],
 function recata(f){if(f.ed!=E.id){location.href=location.pathname+"?edition="+encodeURIComponent(f.ed);return}S.n=f.n.slice();S.b=f.b.slice();S.gu=(f.gu||[0,0,0,0,0,0,0,0]).slice();S.rn=(f.rn||[]).slice();S.per=f.per==null?null:f.per;S.dsc=f.dsc||"";S.tg=(f.tg||[-1,-1,-1,-1]).slice();S.p2=0;S.P=f.P.map(function(p){return p.slice()});if(S.P.length==3&&TIERS.length==4)S.P=[S.P[0],S.P[1],[],S.P[2]];while(S.P.length<TIERS.length)S.P.push([]);S.rd=f.rd.slice();S.gar=f.gar;S.rat=f.rat;S.dsh=f.dsh;S.coll=f.coll.slice();S.alias=f.al;S.fid=f.id;S.lib=0;S.home=0;S.lview=null;S.ton=false;S.tier=0;S.vis=TIERS.map(function(){return 0});S.a=0;S.max=7;S.sealOn=0;render();sc()}
 var MXD={acto:"Con tónica",piram:"La pirámide con tónica",abre:"la burbuja abre el gin",tip:"Servite 150 ml de tónica neutra, despacio, para no perder la burbuja. Después tocá el botón.",btn:"Agregar la tónica",cambio:"¿Qué cambió con la tónica?",ctx:"Con tónica",puro:"El gin está sin tónica"};
 function MX(){var m=E.mezcla||{},o={};Object.keys(MXD).forEach(function(k){o[k]=m[k]!=null?m[k]:MXD[k]});return o}
-var VER="v34";
+var VER="v35";
 var TI=window.WARHOLA_TIENDA||{productos:{},orden:[]};
 function money(n){return "$"+Number(n).toLocaleString("es-AR")}
 function cartLoad(){try{return JSON.parse(localStorage.getItem("warhola.cart")||"{}")||{}}catch(e){return{}}}

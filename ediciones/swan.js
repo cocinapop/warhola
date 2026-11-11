@@ -2,6 +2,7 @@
    Datos del autor: licor de 33,5%, 750 ml, destilado de almendras (estilo amaretto) + triple sec de naranja + nibs de cacao en infusión en frío.
    Historia: redacción de Claude desde el punto de vista de los dos cisnes (Odette y Odile), a pedido del autor; sin referencias a ninguna película. Cisne blanco = naranja, cisne negro = almendra, puente = cacao (definido por el autor). Revisar.
    Los cócteles son sugerencias A PROBAR (prueba:true): aún no están validados.
+   Perfil sensorial (vista, nariz, boca, final) confirmado por el autor.
    Lo que dice null todavía no está definido y no se muestra. Los módulos los dibuja licor.js. */
 window.WARHOLA_EDICIONES=window.WARHOLA_EDICIONES||{};
 window.WARHOLA_EDICIONES["swan"]={
@@ -110,11 +111,11 @@ window.WARHOLA_EDICIONES["swan"]={
    ]
   ],
   "perfil": {
-   "direccion": "El carácter de almendra propio del amaretto, con naranja y un fondo de cacao. Más amable que cada parte por separado.",
-   "vista": null,
-   "nariz": null,
-   "boca": null,
-   "final": null
+   "direccion": "Ámbar, muy aromático y de final sedoso: almendra y naranja al frente, con la acidez de los nibs de cacao.",
+   "vista": "Color ambarado.",
+   "nariz": "Muy aromático, con notas de almendra y naranja.",
+   "boca": "Se sienten la almendra, la naranja y la acidez que aportan los nibs de cacao.",
+   "final": "Muy dulce y sedoso."
   },
   "servicio": {
    "momento": "Después de comer, para un rato de relax en casa.",
@@ -149,11 +150,19 @@ window.WARHOLA_EDICIONES["swan"]={
     "danza.jpg",
     "ala.jpg",
     "poster.jpg"
+   ],
+   "producto": [
+    "frasco.jpg",
+    "cisnes.jpg",
+    "etiqueta.jpg",
+    "cinta.jpg",
+    "tapa.jpg"
    ]
   },
   "alts": {
    "dos": "Warhola Swan entre plumas blancas y negras",
-   "mas": "Imagen de Warhola Swan"
+   "mas": "Imagen de Warhola Swan",
+   "producto": "Frasco de Warhola Swan"
   }
  },
  "musica": {
