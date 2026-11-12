@@ -133,6 +133,7 @@ img.hero-img,img.history-img,img.promo-img,img.ingredients-img,img.bottle-img{ob
 .sheet{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:150;display:none;align-items:flex-end}.sheet.open{display:flex}.sh{background:var(--card);border-top:1px solid var(--gold);width:100%;max-width:480px;margin:0 auto;padding:20px 20px calc(24px + env(safe-area-inset-bottom,0px));animation:up .3s}
 .lnk{background:none;border:0;color:var(--gold);font-size:calc(12.5px*var(--fs,1));text-decoration:underline;padding:8px 0;margin-top:6px}.row{display:flex;gap:6px;flex-wrap:wrap}.ic{vertical-align:-3px;margin-right:6px;color:var(--gold);flex:none}.nfs{display:inline-flex;vertical-align:middle;margin-right:6px;flex:none}.nfs .nf{display:block;border-radius:22%;object-fit:cover;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.35)}.nfs .nf+.nf{margin-left:-8px;outline:2px solid var(--card,#1a1714)}.chip .ic,.opt .ic{margin-right:5px}textarea.inp{font:calc(14px*var(--fs,1)) var(--sans);resize:vertical}
 .homefab{position:fixed;left:14px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:90;display:none;align-items:center;gap:6px;padding:11px 14px;background:var(--card);color:var(--gold);border:1px solid var(--gold);border-radius:999px;font-size:calc(12px*var(--fs,1));letter-spacing:.14em;text-transform:uppercase;box-shadow:0 2px 10px rgba(0,0,0,.35)}.homefab.on{display:flex}main.wrap footer{margin-bottom:64px}
+.soc{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:26px 0 6px}.soc a{border:1px solid var(--gold);color:var(--gold);border-radius:999px;padding:9px 16px;font-size:calc(12.5px*var(--fs,1));letter-spacing:.1em;text-transform:uppercase;text-decoration:none}.legal{text-align:center;color:var(--mute);font-size:calc(11.5px*var(--fs,1));letter-spacing:.05em;margin:10px 0 0;line-height:1.5}
 .tools{gap:4px}.tools .tb{padding:7px 6px}
 </style>
 </head>
@@ -144,6 +145,8 @@ img.hero-img,img.history-img,img.promo-img,img.ingredients-img,img.bottle-img{ob
 <main class="wrap">
  <nav id="nav"></nav>
  <div id="view"></div>
+ <div class="soc" id="soc"></div>
+ <p class="legal">Beber con moderación. Prohibida su venta a menores de 18 años.</p>
  <footer><span id="ftl">WARHOLA GIN</span><span id="ftr" style="font-style:italic;text-transform:lowercase;color:var(--gold)"></span></footer>
 </main>
 <div class="mod" id="mod" data-a="bk"><div class="win"><header><div><span class="eyebrow">Acceso móvil</span><b class="serif" style="font-size:calc(19px*var(--fs,1))">Compartir e instalar</b></div><button class="tb" data-a="mclose" aria-label="Cerrar">✕</button></header><div class="bd" id="mbd"></div></div></div>
@@ -206,7 +209,7 @@ function save(){var a=libGet(),old=a.filter(function(x){return x.id==S.fid})[0],
 function recata(f){if(f.ed!=E.id){location.href=location.pathname+"?edition="+encodeURIComponent(f.ed);return}S.n=f.n.slice();S.b=f.b.slice();S.gu=(f.gu||[0,0,0,0,0,0,0,0]).slice();S.rn=(f.rn||[]).slice();S.per=f.per==null?null:f.per;S.dsc=f.dsc||"";S.tg=(f.tg||[-1,-1,-1,-1]).slice();S.p2=0;S.P=f.P.map(function(p){return p.slice()});if(S.P.length==3&&TIERS.length==4)S.P=[S.P[0],S.P[1],[],S.P[2]];while(S.P.length<TIERS.length)S.P.push([]);S.rd=f.rd.slice();S.gar=f.gar;S.rat=f.rat;S.dsh=f.dsh;S.coll=f.coll.slice();S.alias=f.al;S.fid=f.id;S.lib=0;S.home=0;S.lview=null;S.ton=false;S.tier=0;S.vis=TIERS.map(function(){return 0});S.a=0;S.max=7;S.sealOn=0;render();sc()}
 var MXD={acto:"Con tónica",piram:"La pirámide con tónica",abre:"la burbuja abre el gin",tip:"Servite 150 ml de tónica neutra, despacio, para no perder la burbuja. Después tocá el botón.",btn:"Agregar la tónica",cambio:"¿Qué cambió con la tónica?",ctx:"Con tónica",puro:"El gin está sin tónica"};
 function MX(){var m=E.mezcla||{},o={};Object.keys(MXD).forEach(function(k){o[k]=m[k]!=null?m[k]:MXD[k]});return o}
-var VER="v36";
+var VER="v37";
 var TI=window.WARHOLA_TIENDA||{productos:{},orden:[]};
 function money(n){return "$"+Number(n).toLocaleString("es-AR")}
 function cartLoad(){try{return JSON.parse(localStorage.getItem("warhola.cart")||"{}")||{}}catch(e){return{}}}
@@ -459,7 +462,7 @@ function musInit(){var id=musId();if(!id||S.home||NF||S.shop)return;$("#mustt").
 try{var th=localStorage.getItem("warhola.theme");if(th){document.documentElement.setAttribute("data-theme",th);$("#thm").textContent=th=="light"?"☀":"☾"}var fi=+localStorage.getItem("warhola.fs")||0;fsSet(Math.min(fi,FS.length-1))}catch(e){}
 var HM=S.home||NF||S.shop;document.title=S.shop?"WARHOLA · Tienda":HM?"WARHOLA":(E.tipo=="vodka"||E.tipo=="licor"?"WARHOLA · ":"WARHOLA Gin · ")+E.sub;if(E.accent&&!HM&&!E.tema)document.documentElement.style.setProperty("--ac",E.accent);$("#bsub").textContent=S.shop?"Tienda":HM?"Elegí tu Warhola":E.sub;var VD=!HM&&(E.tipo=="vodka"||E.tipo=="licor"),BB=$(".brand b");if(BB)BB.textContent=HM?"WARHOLA":VD?(E.encab||"WARHOLA VODKA"):"WARHOLA GIN";
 $("#ftl").textContent=(HM?"WARHOLA":VD?(E.encab||"WARHOLA VODKA"):"WARHOLA GIN")+(HM||VD?"":" · "+(/^edici/i.test(E.sub)?E.sub:"Edición "+E.sub).toUpperCase());$("#ftr").textContent=HM?"":(E.lema||"");
-tiOverride();sbLoad();sbOnce("v:"+(S.shop?"tienda":S.home?"portal":NF?"x":E.id),"visita",S.shop?"tienda":S.home?"portal":NF?"desconocido":E.id);if(S.shop)sbOnce("t","tienda","");var HF=$("#homefab");if(HF)HF.classList.toggle("on",!S.home);aplTema();musInit();if(S.shop&&QS.get("gin")){setTimeout(function(){var el=document.getElementById("sh-"+QS.get("gin"));if(el)el.scrollIntoView({behavior:"smooth",block:"center"})},500)}
+tiOverride();sbLoad();sbOnce("v:"+(S.shop?"tienda":S.home?"portal":NF?"x":E.id),"visita",S.shop?"tienda":S.home?"portal":NF?"desconocido":E.id);if(S.shop)sbOnce("t","tienda","");var SC=$("#soc");if(SC){var sh="";if(TI.instagram)sh+='<a href="https://instagram.com/'+encodeURIComponent(TI.instagram)+'" target="_blank" rel="noopener">Instagram · @'+esc(TI.instagram)+'</a>';if(TI.whatsapp)sh+='<a href="https://wa.me/'+encodeURIComponent(TI.whatsapp)+'" target="_blank" rel="noopener">WhatsApp</a>';SC.innerHTML=sh}var HF=$("#homefab");if(HF)HF.classList.toggle("on",!S.home);aplTema();musInit();if(S.shop&&QS.get("gin")){setTimeout(function(){var el=document.getElementById("sh-"+QS.get("gin"));if(el)el.scrollIntoView({behavior:"smooth",block:"center"})},500)}
 render();
 </script>
 </body>
